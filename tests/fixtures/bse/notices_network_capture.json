@@ -1,0 +1,147 @@
+[
+  {
+    "label": "desktop_target",
+    "url": "https://www.bseindia.com/markets/marketinfo/noticescirculars?id=0&txtscripcd=&pagecont=&subject=",
+    "method": "GET",
+    "status_code": 200,
+    "content_type": "text/html",
+    "response_size": 12615,
+    "format": "html",
+    "table_headers": [],
+    "record_count": 0,
+    "sample_records": [],
+    "error": null
+  },
+  {
+    "label": "desktop_alt",
+    "url": "https://www.bseindia.com/markets/MarketInfo/NoticesCirculars?id=0&pagecont=&subject=&txtscripcd=",
+    "method": "GET",
+    "status_code": 200,
+    "content_type": "text/html",
+    "response_size": 12615,
+    "format": "html",
+    "table_headers": [],
+    "record_count": 0,
+    "sample_records": [],
+    "error": null
+  },
+  {
+    "label": "beta_archive",
+    "url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+    "method": "GET",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "response_size": 114399,
+    "format": "html",
+    "table_headers": [
+      "Notice No",
+      "Subject",
+      "Segment Name",
+      "Category Name",
+      "Department",
+      "PDF"
+    ],
+    "record_count": 60,
+    "sample_records": [
+      {
+        "date": "2026-03-13",
+        "subject": "Daily Bulletin",
+        "circular_no": "20260313-60",
+        "link": "https://beta.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=20260313-60",
+        "source_url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "scraped_at": "2026-05-17T15:19:44.243347+00:00"
+      },
+      {
+        "date": "2026-03-13",
+        "subject": "Suspension of Trading in Debentures of SG FINSERVE LIMITED",
+        "circular_no": "20260313-59",
+        "link": "https://beta.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=20260313-59",
+        "source_url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "scraped_at": "2026-05-17T15:19:44.243347+00:00"
+      },
+      {
+        "date": "2026-03-13",
+        "subject": "Suspension of Trading in Debentures of INDEL MONEY LIMITED",
+        "circular_no": "20260313-58",
+        "link": "https://beta.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=20260313-58",
+        "source_url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "scraped_at": "2026-05-17T15:19:44.243347+00:00"
+      }
+    ],
+    "error": null
+  },
+  {
+    "label": "mobile_current",
+    "url": "https://m.bseindia.com/ncp.aspx",
+    "method": "GET",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "response_size": 16886,
+    "format": "html",
+    "table_headers": [
+      "Notice No",
+      "Subject"
+    ],
+    "record_count": 2,
+    "sample_records": [
+      {
+        "date": "2026-05-17",
+        "subject": "Non-Competitive Bidding Facility for Auction of Treasury Bills (T-Bills) on May 20, 2026",
+        "circular_no": "20260517-2",
+        "link": "https://www.bseindia.com/downloads/UploadDocs/Notices/20260517-2/20260517-2.pdf",
+        "source_url": "https://m.bseindia.com/ncp.aspx",
+        "scraped_at": "2026-05-17T15:19:44.395050+00:00"
+      },
+      {
+        "date": "2026-05-17",
+        "subject": "Non-Competitive Bidding for Auction of State Government Securities (SDL) on May 19, 2026",
+        "circular_no": "20260517-1",
+        "link": "https://www.bseindia.com/downloads/UploadDocs/Notices/20260517-1/20260517-1.pdf",
+        "source_url": "https://m.bseindia.com/ncp.aspx",
+        "scraped_at": "2026-05-17T15:19:44.395050+00:00"
+      }
+    ],
+    "error": null
+  },
+  {
+    "label": "mobile_archive",
+    "url": "https://m.bseindia.com/NCPArchive.aspx",
+    "method": "GET",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "response_size": 36477,
+    "format": "html",
+    "table_headers": [
+      "Notice No",
+      "Subject"
+    ],
+    "record_count": 60,
+    "sample_records": [
+      {
+        "date": "2026-03-13",
+        "subject": "Daily Bulletin",
+        "circular_no": "20260313-60",
+        "link": "https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=20260313-60",
+        "source_url": "https://m.bseindia.com/NCPArchive.aspx",
+        "scraped_at": "2026-05-17T15:19:44.522480+00:00"
+      },
+      {
+        "date": "2026-03-13",
+        "subject": "Suspension of Trading in Debentures of SG FINSERVE LIMITED",
+        "circular_no": "20260313-59",
+        "link": "https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=20260313-59",
+        "source_url": "https://m.bseindia.com/NCPArchive.aspx",
+        "scraped_at": "2026-05-17T15:19:44.522480+00:00"
+      },
+      {
+        "date": "2026-03-13",
+        "subject": "Suspension of Trading in Debentures of INDEL MONEY LIMITED",
+        "circular_no": "20260313-58",
+        "link": "https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=20260313-58",
+        "source_url": "https://m.bseindia.com/NCPArchive.aspx",
+        "scraped_at": "2026-05-17T15:19:44.522480+00:00"
+      }
+    ],
+    "error": null
+  }
+]

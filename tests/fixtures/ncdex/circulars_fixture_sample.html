@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Circulars | National Commodity &amp; Derivatives Exchange Limited</title>
+    <meta name="csrf-token" content="fixture-token">
+  </head>
+  <body>
+    <div class="circular-search-tab">
+      <select id="year">
+        <option value="0">Year</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2003">2003</option>
+      </select>
+      <select id="month">
+        <option value="0">Month</option>
+        <option value="05">May</option>
+      </select>
+      <select id="dept">
+        <option value="0">Department</option>
+        <option value="23">Trading</option>
+      </select>
+      <select id="cat">
+        <option value="0">Category</option>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <script>
+      const endpointA = "/circulars/circular_data";
+      const endpointB = "/circulars/getCategory";
+    </script>
+    <table id="file_tbl">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Circular No.</th>
+          <th>Department</th>
+          <th>Subject</th>
+          <th>View</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

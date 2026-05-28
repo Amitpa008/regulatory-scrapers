@@ -1,0 +1,55 @@
+{
+  "d": [
+    {
+      "__type": "SitefinityWebApp.AppCode.Circulars",
+      "Title": "Empanelment as Algo Provider - M/s Bull8.Ai Solutions Pvt. Ltd.",
+      "DisplayTitle": "Empanelment as Algo Provider - M/s Bull8.Ai Solutions Pvt. Ltd.",
+      "Description": "Empanelment as Algo Provider - M/s Bull8.Ai Solutions Pvt. Ltd.",
+      "IsFeaturedCircular": false,
+      "CircularNo": "291",
+      "CircularDate": "/Date(1778783400000)/",
+      "DisplayCircularDate": "15 May 2026",
+      "CompareDate": "20260514",
+      "CircularMonth": "may",
+      "CircularYear": "2026",
+      "CircularTypes": "ctcl",
+      "CircularTypesName": "CTCL",
+      "Documents": "https://www.mcxindia.com/docs/default-source/circulars/english/2026/may/mcxctcl2912026_empanelment-as-algo-provider---bull8-ai-solutions-pvt-ltd.pdf?sfvrsn=21a70c9e_0",
+      "CircularNumber": 291
+    },
+    {
+      "__type": "SitefinityWebApp.AppCode.Circulars",
+      "Title": "Mock Trading",
+      "DisplayTitle": "Mock Trading",
+      "Description": "Mock Trading",
+      "IsFeaturedCircular": false,
+      "CircularNo": "288",
+      "CircularDate": "/Date(1778783400000)/",
+      "DisplayCircularDate": "15 May 2026",
+      "CompareDate": "20260514",
+      "CircularMonth": "may",
+      "CircularYear": "2026",
+      "CircularTypes": "tech",
+      "CircularTypesName": "TECH",
+      "Documents": "https://www.mcxindia.com/docs/default-source/circulars/english/2026/may/circular--288-20260655684857fb64e3bdfdff00007acb35.pdf?sfvrsn=56af0c9e_0",
+      "CircularNumber": 288
+    },
+    {
+      "__type": "SitefinityWebApp.AppCode.Circulars",
+      "Title": "Reminder - Submission of data pertaining to Risk Based Supervision and Internal Audit Report",
+      "DisplayTitle": "Reminder - Submission of data pertaining to Risk Based Supervision and Internal Audit Report",
+      "Description": "Reminder - Submission of data pertaining to Risk Based Supervision and Internal Audit Report",
+      "IsFeaturedCircular": false,
+      "CircularNo": "289",
+      "CircularDate": "/Date(1778783400000)/",
+      "DisplayCircularDate": "15 May 2026",
+      "CompareDate": "20260514",
+      "CircularMonth": "may",
+      "CircularYear": "2026",
+      "CircularTypes": "membership-and-compliance",
+      "CircularTypesName": "Membership and Compliance",
+      "Documents": "https://www.mcxindia.com/docs/default-source/circulars/english/2026/may/circular-289-2026.pdf?sfvrsn=b3a70c9e_0",
+      "CircularNumber": 289
+    }
+  ]
+}

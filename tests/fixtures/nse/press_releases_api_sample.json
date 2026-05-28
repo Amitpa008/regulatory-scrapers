@@ -1,0 +1,50 @@
+[
+  {
+    "content": {
+      "title": "Corporate Communications",
+      "body": "National Stock Exchange and Higher Education Department, Government of Karnataka sign MOU to Empower Students through Skilling Program",
+      "field_date": "18-May-2026",
+      "field_file_attachement": {
+        "url": "https://nsearchives.nseindia.com//web/pressrelease/2026-05/PR_cc_18052026_0_20260518111000.pdf",
+        "desc": ""
+      },
+      "field_type": "Corporate Communications",
+      "field_unique_url": null
+    },
+    "id": 76259,
+    "changed": "18-May-2026",
+    "type": "press_releases"
+  },
+  {
+    "content": {
+      "title": "Surveillance",
+      "body": "Clarification by Raymond Limited<br/>Clarification by Rhetan TMT Limited",
+      "field_date": "18-May-2026",
+      "field_file_attachement": {
+        "url": "https://nsearchives.nseindia.com//web/pressrelease/2026-05/PR_surv_18052026_20260518180408.pdf",
+        "desc": ""
+      },
+      "field_type": "Surveillance",
+      "field_unique_url": null
+    },
+    "id": 76261,
+    "changed": "18-May-2026",
+    "type": "press_releases"
+  },
+  {
+    "content": {
+      "title": "NSE Listing",
+      "body": "Press Release dated May 18, 2026",
+      "field_date": "18-May-2026",
+      "field_file_attachement": {
+        "url": "/web/pressrelease/2026-05/PR_LIST_18052026_20260518173052.pdf",
+        "desc": ""
+      },
+      "field_type": "NSE Listing",
+      "field_unique_url": null
+    },
+    "id": 76260,
+    "changed": "18-May-2026",
+    "type": "press_releases"
+  }
+]

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Communiques / Sebi Circulars - Eservices</title>
+    <script>
+      var LoadURL = "/eservices/Publications/GetOnLoadCommunique";
+      var GetCommData = "/eservices/Publications/CommuniquePost";
+    </script>
+  </head>
+  <body>
+    <form id="commForm">
+      <input id="cno" />
+      <input id="fromDate" />
+      <input id="toDate" />
+      <input id="Keyword" />
+      <input id="Subject" />
+      <input id="dpSelect" type="radio" value="3" checked />
+      <input id="rtaSelect" type="radio" value="4" />
+      <button id="btnSubmit">Search</button>
+    </form>
+    <table id="tblCommuniqueDtl">
+      <tbody id="tblCommuniquDtlBody"></tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "title": "Circular No. 4/2026 : Referencing by Document Identification Number (DIN)",
+      "friendlyUrlPath": "circular-no.-4/2026-referencing-by-document-identification-number-din-",
+      "contentFields": [
+        {
+          "name": "circularNotificationNumber",
+          "contentFieldValue": {
+            "data": "Circular No. 4/2026"
+          }
+        },
+        {
+          "name": "selectType",
+          "contentFieldValue": {
+            "data": "PDF"
+          }
+        },
+        {
+          "name": "reportFile",
+          "contentFieldValue": {
+            "document": {
+              "contentUrl": "/documents/d/guest/circular-4-2026-pdf",
+              "fileExtension": "pdf"
+            }
+          }
+        },
+        {
+          "name": "circularNotificationDate",
+          "contentFieldValue": {
+            "data": "2026-03-31T02:45:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Circular 10/DV/2013 : Section 40(a)(ia) clarification",
+      "friendlyUrlPath": "circular-10/dv/2013-section-40-a-ia-clarification",
+      "contentFields": [
+        {
+          "name": "circularNotificationNumber",
+          "contentFieldValue": {
+            "data": "Circular 10/DV/2013"
+          }
+        },
+        {
+          "name": "selectType",
+          "contentFieldValue": {
+            "data": "HTML"
+          }
+        },
+        {
+          "name": "circularNotificationDate",
+          "contentFieldValue": {
+            "data": "2013-12-16T00:00:00Z"
+          }
+        }
+      ]
+    }
+  ],
+  "totalCount": 2
+}

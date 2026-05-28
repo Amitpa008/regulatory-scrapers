@@ -1,0 +1,38 @@
+{
+  "Table": [
+    {
+      "Scrip_cd": "",
+      "Segment_id": "fb443676-3362-4762-b67b-83f8083ff46a",
+      "Segment_Name": "Debt",
+      "Notice_id": "1983",
+      "Notice_Date": "2026-05-17T00:00:00",
+      "Notice_no": "20260517-2",
+      "Subject": "Non-Competitive Bidding Facility for Auction of Treasury Bills (T-Bills) on May 20, 2026",
+      "category_name": "Trading",
+      "dt_tm": "2026-05-17T00:00:00",
+      "Dept_Name": "Trading Operations",
+      "FileName": "https://www.bseindia.com/downloads/UploadDocs/Notices/20260517-2/20260517-2.pdf",
+      "PgName": 0,
+      "flag": 1,
+      "Previous": "20260515",
+      "Next": ""
+    },
+    {
+      "Scrip_cd": "",
+      "Segment_id": "fb443676-3362-4762-b67b-83f8083ff46a",
+      "Segment_Name": "Debt",
+      "Notice_id": "1982",
+      "Notice_Date": "2026-05-17T00:00:00",
+      "Notice_no": "20260517-1",
+      "Subject": "Non-Competitive Bidding for Auction of State Government Securities (SDL) on May 19, 2026",
+      "category_name": "Trading",
+      "dt_tm": "2026-05-17T00:00:00",
+      "Dept_Name": "Trading Operations",
+      "FileName": "https://www.bseindia.com/downloads/UploadDocs/Notices/20260517-1/20260517-1.pdf",
+      "PgName": 0,
+      "flag": 1,
+      "Previous": "20260515",
+      "Next": ""
+    }
+  ]
+}

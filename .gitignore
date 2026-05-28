@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# Runtime data exports
+data/*.csv
+data/*.json
+data/*.xlsx
+data/*.zip
+data/*.pdf
+data/*.checkpoint.json
+data/*checkpoint*.json
+data/*validation_report*.json
+data/*year_counts*.csv
+data/*category_counts*.csv
+data/*link_check*.csv
+
+# Keep folder if needed
+!data/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Playwright / browser artifacts
+playwright-report/
+test-results/

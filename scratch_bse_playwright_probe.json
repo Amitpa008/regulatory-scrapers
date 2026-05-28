@@ -1,0 +1,1404 @@
+[
+  {
+    "current_title": "BSE - Notices & Circulars",
+    "current_url": "https://www.bseindia.com/markets/marketinfo/noticescirculars?id=0&txtscripcd=&pagecont=&subject="
+  },
+  {
+    "archive_title": "BSE - Notices & Circulars",
+    "archive_url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+    "frame_urls": [
+      "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+      ""
+    ],
+    "has_top_txtDate": 1,
+    "forms": 2,
+    "inputs": 84,
+    "html_path": "scratch_bse_archive_rendered.html"
+  },
+  {
+    "initial_rows": [
+      [
+        "20260313-60",
+        "Daily Bulletin"
+      ],
+      [
+        "20260313-59",
+        "Suspension of Trading in Debentures of SG FINSERVE LIMITED"
+      ],
+      [
+        "20260313-58",
+        "Suspension of Trading in Debentures of INDEL MONEY LIMITED"
+      ],
+      [
+        "20260313-57",
+        "Suspension of Trading in Debentures of SHEELA FOAM LIMITED"
+      ],
+      [
+        "20260313-56",
+        "Suspension of Trading in Debentures of Fedbank Financial Services Limited"
+      ],
+      [
+        "20260313-55",
+        "Suspension of Trading in Debentures of SK FINANCE LIMITED"
+      ],
+      [
+        "20260313-54",
+        "Suspension of Trading in Debentures of SPANDANA SPHOORTY FINANCIAL LIMITED"
+      ],
+      [
+        "20260313-53",
+        "Suspension of Trading in Debentures of ECap Equities Limited"
+      ],
+      [
+        "20260313-52",
+        "Suspension of Trading in Debentures of KLM AXIVA FINVEST LIMITED"
+      ],
+      [
+        "20260313-51",
+        "Suspension of Trading in Debentures of 360 ONE PRIME LIMITED"
+      ]
+    ]
+  },
+  {
+    "previous_day_row_count": 50,
+    "previous_day_rows": [
+      [
+        "20260312-50",
+        "Daily Bulletin"
+      ],
+      [
+        "20260312-49",
+        "Part Redemption of Debentures of ANZEN INDIA ENERGY YIELD PLUS TRUST"
+      ],
+      [
+        "20260312-48",
+        "Part Redemption of Debentures of ACHIIEVERS FINANCE INDIA LIMITED"
+      ],
+      [
+        "20260312-47",
+        "Part Redemption of Debentures of NAMRA FINANCE LIMITED"
+      ],
+      [
+        "20260312-46",
+        "Part Redemption of Debentures of GRAND HILLS DEVELOPMENTS PRIVATE LIMITED"
+      ],
+      [
+        "20260312-45",
+        "Part Redemption of Debentures of VARTHANA FINANCE PRIVATE LIMITED"
+      ],
+      [
+        "20260312-44",
+        "Part Redemption of Debentures of KANAKADURGA FINANCE LIMITED"
+      ],
+      [
+        "20260312-43",
+        "Part Redemption of Debentures of CUBE HIGHWAYS TRUST"
+      ],
+      [
+        "20260312-42",
+        "Part Redemption of Debenture of APTUS FINANCE INDIA PRIVATE LIMITED"
+      ],
+      [
+        "20260312-41",
+        "Part Redemption of Debentures of AMBIT FINVEST PRIVATE LIMITED"
+      ]
+    ],
+    "previous_day_url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+    "previous_day_requests": [
+      {
+        "method": "POST",
+        "url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "resource_type": "document",
+        "post_data": "__EVENTTARGET=ctl00%24ContentPlaceHolder1%24lnkPreviousDay&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=LxOD8HHILECTKfDScP7TmKaI%2FXZMFSkMY86gvuuGXMEOJrVwpNcFOUo7mtOjbhUJ9Vhl5XUMc4GFdSLcV9nc8mmcGtFgKJL%2FRpTAX7Fqs0s8Uv0EeC8E7O7%2BB1aC3zarlOEqwfmVRePU56sVB5idH8aV4clhJiUkC5w8P6O%2BREKloW0h9F3vn64OWK%2BRMcjMaU%2F4HckJxnuyXL3apm5U94L0TgVWnhbt2UaSlBzxRuavaPpx3ruAVvFWh7GNj4uU7Bih7i1VCI7z0tU%2FH5FMZEwDLEX5gFcX1dhfm%2Frktpyp4JgmQEB1s5RBC9D%2BLBAi9jG%2FXEG1knUHqCq3FbiHOJ2XcY7AKlQrraDN%2B9BSlE917r7OCmc65Rq%2BdqrmFW2zrVk3EovpwUKZjD5NGS8H2xMN6nW%2FWzCDkvp4IUr4hO8FwS757qap1xmleJXjoxK3V3JIGzQeM5nxwZPMMBVCxefwzUc0B2Kk70Ojqls4dDz2FcUHOvD2xcs0rkFAj8WrO0uLzVtP9Pasty21WXBGtEhrzbuHcPC28dIO6l7MfmR0o0YpZAT6JJHcpErE6X9hgOi4YcCAUlAwJU5dpaj4J5elx35i8TWAlJvhIciRocqmtZ%2FjI%2FpEVPKlMpNSSROSvFjTIKgwzquKjTkl3dy82uDRJDVdp5cy14c%2FZL4QI5TmWkjc%2FWr0kLXpAy%2FnOw0S%2F6XFeOOmb%2Bj%2FZ1A02Go02zUiRpATJHP7Uwik9Z06Y56M%2FWnYGed9tgdBFVjIV1ygyZL633s5Q3ENvFYbKapJ1IjqXd45P3plCXU50u5k5IaHv0g8p9QmSORWyjm%2BFgl3tGFqy%2Bu6cEBzophA1XzYXDhzgFmWNjXdV3jIvtTQ7TwcOv7mDxCSLJ%2Fou4r4%2FYyufzjgAZrhVWK37M052X1KXOKKYu7KvIjWh9Z5YCOalH4C8b0nrBqunt6Ym6axi0REr0Gl2FLXK5pCB8z7At4dPvW34PZqadOhlDCUI5j%2B3CjvvUO3U2agjb0XS1yafgkJtPfP4w0Fh2DvMqJq1n5is4hIlATM%2BbUwjBn2qORS3H42eTSerHafRbfTZQmLeEn8BTW%2F%2B8IZAiBYaU%2B9gwPIweG%2FQItTOOTDz3QxRbA2V2E36hWe6adMxABVyhbjoUIpAar3SlhZOhBR3PijFwpOhC4waipMqQvKoRMYRfpwcmODBk%2BRF7uvCMAjDxuZRxomCpC3fzhcejxgZiE4vyePVMGJqgyxc%2BruPXU7WnGMO5rLS9ljkasg8G0eD81pyv9QRBHDR6hTKKnzmntmXL42fYBRHQDaKgfGMyPKQn6JXR4Q%2Fhcx9FfByHhWO1fVPPyjDct4r3XlOO0oxBb1X8oCQRXvYUbOaKG9qMbZKwA%2BjuqxLjMltXLDIE6XlX%2B3jeZOMRqV6DRZ9bB9ZnS%2FjfDhFLvMFM%2BsLE8vGFMZs1BTtmWATTgNwCikF5Dfw3MEMrbuvJiy1XhqeoZBj8u55Vl3uZaQ9oISzaySjVSUVJoXdxq8UxiSTh3UDvug8KnK5EwxOXx8hA%2FfyqVqQL7%2BZ9wrpW8toTWOpa507ppPD8OirRwOHs40LdXCuMVlNFyjBpyhXbXjIfXNIoXyQfu0iH38SY2mt0XmvnONVLCaG6FDbz07XnTnaObYuTlYfrKibePZieurDU8l1cj%2FC1uwv37uJSkkEkM6p6cSJlSKXdRZFu8TeU2O4t75qwBkEOsnCxo27Z4%2BrYdUKb7wyO45XBtLIDaZoibotwEAzA90F1RykPNXRMHihMmj%2FlxdlMuflhgrv4zSn%2BltzcQxhcjAohLWO%2F3hIV2knWGD3ryJgeSaT%2FHAdvHLBit2fnG9rJig38IT4VIbxc%2FEVjf4wZNq1F7KXOvoj4BvmWW%2FEeN%2FPqKYVeLx89OduWWrlRnQJxUmD5dDlSgcX7rTfydys4HQDW9nzKnpVt1AHLRnGcMxmOggLt7QP1QfYVVP%2BNqEjNhrY7ZpxofqLDT91vJVvSSiJAe%2B9I%2FJCT4raurZ%2BASCZjt1VXrvTpcqleq5MsJeLspVfO4BQ%2Bd%2B%2FfmnijBhkjlRUEnAvIp3BnkNwi%2BgYW39xDub8pd6gXpFp%2FIO77cAVPVKmgcs45Nue0gR%2BtPayyCjXvan4uPvlpwa1UwRMJm621MuYAwJgHqdYVfwt5Fz85ju5JiDUQTbtqMG4rBdTqLkerHiLKoKiISW7CCck0i%2FiR2nMA5XWGRswWfe%2BlGUftVmnSJB6uA%2FmswHm7NveFxP9V2F0pW8EVafxndv4yC8W78azDXutyKjH6Bs1G1oBg%2FDHKSXDEvAY7POibVbKB1qR0uD9HrvMIr8tk7Tx4Uqybw5t1t2QCHaQTOvy01G4MtpfgNEqE7JIC%2F5UC2YWws%2F1aPfX%2BTB%2BbAsKDSQu94hJT9DMrh7zwOdEX3hG36iJV0jp%2F5AhVh%2FzVpgvPooVn17M7N6Lzh2OywNLYVn%2BIEKUsoiDhpu5ZxZT4snmLNEdkfQiTvHorEuGt%2FAk7xYh1EDupuFV4fnsvJ3xRd8jLQ%2Fz2WvJulzYdA7qwa4nRVqv8wbx3uFJ5iUNkZtnERo%2BnV6SYMPPbRjULR8GEmfRc76N6nVY2VjZoGhHb9sWI1ho1IRUY8jd%2BWT1MyccyeTRCOMB6cJyaB36gklJvDXu8VwpthihT%2FT7%2FQYmm2bH%2BAjGdBqiMyXJDqBXR%2F%2BBB1fCaqHPn7MKMplGYm%2FygJkaZRl9PDUy6o7hB3G0"
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/bootstrap.css?v=1",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/font-awesome.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquerylatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.bseindia.com/include/js/google_mid.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jqueryuilatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/jquery-ui-Latest.min.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartNewSearchPrimary.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/Eqautocomplete_sv1.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular-sanitize.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://bnotification.bseindia.com/socket.io/socket.io.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagservices.com/tag/js/gpt.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/pdficon.gif",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.ui.touch-punch.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.bootstrap-responsive-tabs.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262111",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/Roboto-Regular-webfont.woff",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fontawesome-webfont.woff?=4.3.0",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-brands-400.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-v4compatibility.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bg.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262130",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/AppnewController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/factoryother.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/Headernew_streamController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartSearch_SSUC.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/5JuDgOa.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202605120101/pubads_impl.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/footer.aspx",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/bootstrap.min.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PVKM6SF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-TM52BJH9HF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032469920&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=1&tag_exp=0~115938466~115938469&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&tfd=1294",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/top_new.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/menu.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bselogo.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/spbse.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/loader.gif",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style_high.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/highcontra.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://s.go-mpulse.net/boomerang/DZP23-UEMEM-TZZHS-5T9A2-7WLHC",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032469920&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAACAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=2&tag_exp=0~115938466~115938469&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&_et=85&tfd=1392",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/font-size1.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcontrast.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcommon.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/keynavigate.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://api.bseindia.com/RealTimeBseIndiaAPI/api/GetSensexData/w",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/Menubanner.jpg",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/dict/m202605140101/gpt",
+        "resource_type": "other",
+        "post_data": null
+      }
+    ],
+    "previous_day_html_path": "scratch_bse_previous_day.html"
+  },
+  {
+    "label": "current_month",
+    "range": [
+      "2026-05-01",
+      "2026-05-16"
+    ],
+    "row_count": -1,
+    "rows": [],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/dict/m202605140101/gpt",
+        "resource_type": "other",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "resource_type": "document",
+        "post_data": "__EVENTTARGET=&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=LxOD8HHILECTKfDScP7TmKaI%2FXZMFSkMY86gvuuGXMEOJrVwpNcFOUo7mtOjbhUJ9Vhl5XUMc4GFdSLcV9nc8mmcGtFgKJL%2FRpTAX7Fqs0s8Uv0EeC8E7O7%2BB1aC3zarlOEqwfmVRePU56sVB5idH8aV4clhJiUkC5w8P6O%2BREKloW0h9F3vn64OWK%2BRMcjMaU%2F4HckJxnuyXL3apm5U94L0TgVWnhbt2UaSlBzxRuavaPpx3ruAVvFWh7GNj4uU7Bih7i1VCI7z0tU%2FH5FMZEwDLEX5gFcX1dhfm%2Frktpyp4JgmQEB1s5RBC9D%2BLBAi9jG%2FXEG1knUHqCq3FbiHOJ2XcY7AKlQrraDN%2B9BSlE917r7OCmc65Rq%2BdqrmFW2zrVk3EovpwUKZjD5NGS8H2xMN6nW%2FWzCDkvp4IUr4hO8FwS757qap1xmleJXjoxK3V3JIGzQeM5nxwZPMMBVCxefwzUc0B2Kk70Ojqls4dDz2FcUHOvD2xcs0rkFAj8WrO0uLzVtP9Pasty21WXBGtEhrzbuHcPC28dIO6l7MfmR0o0YpZAT6JJHcpErE6X9hgOi4YcCAUlAwJU5dpaj4J5elx35i8TWAlJvhIciRocqmtZ%2FjI%2FpEVPKlMpNSSROSvFjTIKgwzquKjTkl3dy82uDRJDVdp5cy14c%2FZL4QI5TmWkjc%2FWr0kLXpAy%2FnOw0S%2F6XFeOOmb%2Bj%2FZ1A02Go02zUiRpATJHP7Uwik9Z06Y56M%2FWnYGed9tgdBFVjIV1ygyZL633s5Q3ENvFYbKapJ1IjqXd45P3plCXU50u5k5IaHv0g8p9QmSORWyjm%2BFgl3tGFqy%2Bu6cEBzophA1XzYXDhzgFmWNjXdV3jIvtTQ7TwcOv7mDxCSLJ%2Fou4r4%2FYyufzjgAZrhVWK37M052X1KXOKKYu7KvIjWh9Z5YCOalH4C8b0nrBqunt6Ym6axi0REr0Gl2FLXK5pCB8z7At4dPvW34PZqadOhlDCUI5j%2B3CjvvUO3U2agjb0XS1yafgkJtPfP4w0Fh2DvMqJq1n5is4hIlATM%2BbUwjBn2qORS3H42eTSerHafRbfTZQmLeEn8BTW%2F%2B8IZAiBYaU%2B9gwPIweG%2FQItTOOTDz3QxRbA2V2E36hWe6adMxABVyhbjoUIpAar3SlhZOhBR3PijFwpOhC4waipMqQvKoRMYRfpwcmODBk%2BRF7uvCMAjDxuZRxomCpC3fzhcejxgZiE4vyePVMGJqgyxc%2BruPXU7WnGMO5rLS9ljkasg8G0eD81pyv9QRBHDR6hTKKnzmntmXL42fYBRHQDaKgfGMyPKQn6JXR4Q%2Fhcx9FfByHhWO1fVPPyjDct4r3XlOO0oxBb1X8oCQRXvYUbOaKG9qMbZKwA%2BjuqxLjMltXLDIE6XlX%2B3jeZOMRqV6DRZ9bB9ZnS%2FjfDhFLvMFM%2BsLE8vGFMZs1BTtmWATTgNwCikF5Dfw3MEMrbuvJiy1XhqeoZBj8u55Vl3uZaQ9oISzaySjVSUVJoXdxq8UxiSTh3UDvug8KnK5EwxOXx8hA%2FfyqVqQL7%2BZ9wrpW8toTWOpa507ppPD8OirRwOHs40LdXCuMVlNFyjBpyhXbXjIfXNIoXyQfu0iH38SY2mt0XmvnONVLCaG6FDbz07XnTnaObYuTlYfrKibePZieurDU8l1cj%2FC1uwv37uJSkkEkM6p6cSJlSKXdRZFu8TeU2O4t75qwBkEOsnCxo27Z4%2BrYdUKb7wyO45XBtLIDaZoibotwEAzA90F1RykPNXRMHihMmj%2FlxdlMuflhgrv4zSn%2BltzcQxhcjAohLWO%2F3hIV2knWGD3ryJgeSaT%2FHAdvHLBit2fnG9rJig38IT4VIbxc%2FEVjf4wZNq1F7KXOvoj4BvmWW%2FEeN%2FPqKYVeLx89OduWWrlRnQJxUmD5dDlSgcX7rTfydys4HQDW9nzKnpVt1AHLRnGcMxmOggLt7QP1QfYVVP%2BNqEjNhrY7ZpxofqLDT91vJVvSSiJAe%2B9I%2FJCT4raurZ%2BASCZjt1VXrvTpcqleq5MsJeLspVfO4BQ%2Bd%2B%2FfmnijBhkjlRUEnAvIp3BnkNwi%2BgYW39xDub8pd6gXpFp%2FIO77cAVPVKmgcs45Nue0gR%2BtPayyCjXvan4uPvlpwa1UwRMJm621MuYAwJgHqdYVfwt5Fz85ju5JiDUQTbtqMG4rBdTqLkerHiLKoKiISW7CCck0i%2FiR2nMA5XWGRswWfe%2BlGUftVmnSJB6uA%2FmswHm7NveFxP9V2F0pW8EVafxndv4yC8W78azDXutyKjH6Bs1G1oBg%2FDHKSXDEvAY7POibVbKB1qR0uD9HrvMIr8tk7Tx4Uqybw5t1t2QCHaQTOvy01G4MtpfgNEqE7JIC%2F5UC2YWws%2F1aPfX%2BTB%2BbAsKDSQu94hJT9DMrh7zwOdEX3hG36iJV0jp%2F5AhVh%2FzVpgvPooVn17M7N6Lzh2OywNLYVn%2BIEKUsoiDhpu5ZxZT4snmLNEdkfQiTvHorEuGt%2FAk7xYh1EDupuFV4fnsvJ3xRd8jLQ%2Fz2WvJulzYdA7qwa4nRVqv8wbx3uFJ5iUNkZtnERo%2BnV6SYMPPbRjULR8GEmfRc76N6nVY2VjZoGhHb9sWI1ho1IRUY8jd%2BWT1MyccyeTRCOMB6cJyaB36gklJvDXu8VwpthihT%2FT7%2FQYmm2bH%2BAjGdBqiMyXJDqBXR%2F%2BBB1fCaqHPn7MKMplGYm%2FygJkaZRl9PDUy6o7hB3G0af8meEWBP3IHUVlaKDeLdLv6cHME2lMThEtxVtLEIz2%"
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/bootstrap.css?v=1",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/font-awesome.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquerylatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.bseindia.com/include/js/google_mid.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jqueryuilatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/jquery-ui-Latest.min.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartNewSearchPrimary.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/Eqautocomplete_sv1.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular-sanitize.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://bnotification.bseindia.com/socket.io/socket.io.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagservices.com/tag/js/gpt.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.ui.touch-punch.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.bootstrap-responsive-tabs.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262111",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/Roboto-Regular-webfont.woff",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fontawesome-webfont.woff?=4.3.0",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-brands-400.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-v4compatibility.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bg.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262130",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/AppnewController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/factoryother.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/Headernew_streamController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartSearch_SSUC.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/5JuDgOa.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202605120101/pubads_impl.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/footer.aspx",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/bootstrap.min.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PVKM6SF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-TM52BJH9HF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032473010&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=1&tag_exp=0~115616986~115938466~115938468&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&tfd=615",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/top_new.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/menu.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032473010&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AEAAAGQ&ae=a&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=2&tag_exp=0~115616986~115938466~115938468&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=scroll&_c=1&epn.percent_scrolled=90&_et=39&tfd=662",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bselogo.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/spbse.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/loader.gif",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style_high.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/highcontra.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://s.go-mpulse.net/boomerang/DZP23-UEMEM-TZZHS-5T9A2-7WLHC",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032473010&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAACAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=3&tag_exp=0~115616986~115938466~115938468&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&_et=34&tfd=704",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/font-size1.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcontrast.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcommon.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/keynavigate.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://api.bseindia.com/RealTimeBseIndiaAPI/api/GetSensexData/w",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/Menubanner.jpg",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/dict/m202605140101/gpt",
+        "resource_type": "other",
+        "post_data": null
+      }
+    ],
+    "url_after": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+    "html_path": "scratch_bse_current_month.html"
+  },
+  {
+    "label": "previous_month",
+    "range": [
+      "2026-04-01",
+      "2026-04-30"
+    ],
+    "row_count": -1,
+    "rows": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "resource_type": "document",
+        "post_data": "__EVENTTARGET=&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=6%2FI6eMJ7wgqW%2BUX7Xws0F%2FhZ0OGHcvQtBiuBDPwexod6BV1%2BGQPUdJNDvPmq%2Fwop1YL1XkAdAS8SlotlTamhmAt19e%2BUTARpGFzH8zBtfBSZZkGyN72seTilCLSJuiGhgIlC5R2nJqq8zOOgXjsIyfgPwxnSiiGU3y3HTSOrClMxamjlaqg3%2BXu5qtNEz5IH8q4igYQRdnpSkloowtLMp6K3tXBvEipWN5%2FDNmPI9iKPN4ki974xn2cYTBxH7%2FXwvPgzMoaxR1JunXiNQ7irYEw9Avt4mjpiVGEJNF9vVwPmV%2FsUnuHzLWCctaEBMfb4M%2FnRn6cfpzPE%2FnwkhDLQk5bCIAKhEHwFOnn0qlADCqgDT%2F%2BHzbHEVSlW30oXIz6YwwVkqlai2Uu63%2FmxyP%2B4M8aPRdMfTXA82Sd0Voo8igOyS0axJc2ng6OhH6oCDsKEb0itjHTB%2B3hoIiF0qxwtwgRNOPjp7LlaNgxFX2WOO4U%2FzYSE7UOXlqf5FIIXiaspCcCB5A49JJLLBaRkvUG4wxlDuFiFTi7dHB%2BeAyAYJJrevX73RnWMuF89PXbI71FM6zi4SM6DSeIUZHPLAiusmadD%2B5GIthLbgkQn0oHdqsdQRgmnRM63SGHy%2BpA5dcdUtHAazBLR6c6eH34lu8%2BJaWvl%2F6kBPNXh8GzNl1xVs2vUO7GwX2J1dnobEVz182aF0C%2Fqgse5%2FolMSyxERw%2FtsroHc3i1eGo4B7BAky3DTNP0fbt6Ptx6XIBAB3c6sRJsIXwfqIqNxCd3UT9cOjoR2a%2FsU6BEybMZtbR96bBcdYJUvtdTvfiJZxL2j5F5AJw8iTOSISj9GdmAW9P6noTYh%2BAHwUflcj6CkT9FWYfIx%2Bg7ML29NV0D5ZgyomljyBz%2BxxZo12VkytGiRkqKyWtqQxiGSabl%2FJKZmLf3%2BGc%2F%2BgUiLilmHdl3YDgYUj7lz0slj6LFaW64u8Naj%2BYddVWdyPFYyIaTk7iYLUfQZo8N0GpRdxGIoXM94Ecbmo5aBfeUPGrrZ5gAL1FpoSIZ5HC4LqbOGC9Ke2pYib%2BQzh0r9wRLtB1m0AEwcRL7q80c%2FBS5qVl81fMHt2rFHxLWEF9pdeOVvilrq2bCkFS2JRjcGeVW6MuX%2BsRneQMfB5tG92TkhFn79lRwSYfkTLl7lj6K8BLjgJRl54msUXfTRVSJyE2SQ6B8EOtwvCV215%2F7a%2FGL%2Bk76YTPit3E1UDO8IicGmqUk%2BnTCwgdY9HE20wZd1g9Y3SrzCczyPcxeHwr%2FWieQyEhXZu1XLDOQTUu9l%2FPHfgVWxj3qPZX2Kbs3kAfCXmAxeHUAD%2FwVOOGVf9rCTKVy3upHG7GdLRte%2BZVBehRdS63G9Kitdm%2BrmONZxOV%2FiGN%2FYC0d1yUPNTZIcdBjyHxqgI0J2mn5QIRrP9Hd2ED4ssTgcRp%2BmibxZjBAvj0YvclIPjZugPjsZk%2FD9Yw1mW0M%2F6Goy6CVGzGyAxlM1KhMgH6gtiaAMmIL2UR6gw5dpo4U8DRa1mYBoAFGsmaveBUZn43yIxswacm8ibGZCgrgOj%2F0HBasJ6vxfhA%2FV5Bg6XsWgZ27XcsbuCDN7OJ%2BLmrvmrCof5%2F%2F2tCaBOdBv40RRBdHteozCETFL2FcEZAvUzUZzWZHc9BlrpsMP5COqbuldWOIEpTUED7hQcAVAj%2FN%2Bv0rL2Vd1R726HUD8wEm%2Fkgg6dwSpKZlnuRNrB6bMyJnmIXhqagMH6u3rhKptPWh9N2VygNXsjo61z9uzeZFYjauPEYQYaJ1EbU%2B8xpQJsH41iOcMv74oWFH%2BGqQuh1OQH9I9IHPUIRyYGsjz70Ua7jAvFwR3WUVu22%2BR115sZB44hvpZCpFdvGvDpyRncecPkDxGmQekGoy1amIHOnvWLwr1QtzXja%2FC6pjVd4ZPINJBxjPik%2BuC4u5xylocA2t8BaBce7tSqP4p%2FNZSXTySfqmFvxImUuu5Tnth2peVh6VsDyx4%2BAmR3RCxKAWtB1oaqy1OZYg1Pw7LVshrW90aCS7ZnNqeQLXlFgFtzc4UW4YJnCzwQ3yXRm13pfCi1dEMxDgWXD55WiKyGYyWcmkCMpBklFR7vqcSEWUUKAkYsSxO%2BAWO2scqaS89zlqCwARtyX3jVxs%2FRtbvtxYDzfgRq%2FyJvThWc7u46uxIfp%2FF41BmUgb4a6mqHRv5EPsD2OuTKsIUU1y5ujinU%2F91vnRTtuuFQDG8ZUGoQkYkYHBKwbsMEN6kT7vZfxcmiDrQJp%2Bt9rFeq5NtQtEiGh2Q2vO%2FLo0em729VomgCrDeu6%2Fs%2B1KXS0PkM0LuQpKlionEWt0eJDVTmFMsStxesfuFjX5p%2F7nlxlNEjozaYq46NP7NDaBdV6RBvdKnUsaUglB9JgxGwhIbgrmTrU4aozptf0V5vmwsrf0pp%2FSCzNODBInk4PLN7KQ%2BKc%2BupcoaX1EvDIpXW%2BVXfuBSDt85t6ulluMbpEM2PFJLQyz1fJMgHeLsWZk4I9X4J3TJ75EPjGJtYVZgyyQtkUq%2BJ4tqxlEuHO5HCwBZL4V%2BdRZN%2BcP2VymQk5I10WJw84OOVIWX612UI0dKk5%2FJTpcurY7vCah%2FdQBm%2BqlvlNCh%2BTmZkRYlrhz1fKRu8SNcdob1xHI7viSo9s4aJImTdcFOpg4AVEyMMY1yStvMUaW1B4aYDlkGGl3jSaylUoN1faD9PUOUW1008Bl9xEVnDRTgh2oUCrOLfp7C7FBFDFTTSzparSQ18BHQNLHBJYa1g6lYsfMk0O"
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032473010&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=4&tag_exp=0~115616986~115938466~115938468&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=user_engagement&_et=1411&tfd=2123",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://www.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032473010&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=3&_s=4&tag_exp=0%7E115616986%7E115938466%7E115938468&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE+-+Notices+%26+Circulars&en=user_engagement&_et=1411&tfd=2123",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/bootstrap.css?v=1",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/font-awesome.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquerylatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.bseindia.com/include/js/google_mid.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jqueryuilatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/jquery-ui-Latest.min.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartNewSearchPrimary.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/Eqautocomplete_sv1.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular-sanitize.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://bnotification.bseindia.com/socket.io/socket.io.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagservices.com/tag/js/gpt.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.ui.touch-punch.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.bootstrap-responsive-tabs.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262111",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/Roboto-Regular-webfont.woff",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fontawesome-webfont.woff?=4.3.0",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-brands-400.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-v4compatibility.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bg.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262130",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/AppnewController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/factoryother.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/Headernew_streamController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartSearch_SSUC.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/footer.aspx",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/bootstrap.min.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/5JuDgOa.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202605120101/pubads_impl.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PVKM6SF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-TM52BJH9HF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032474819&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=1&tag_exp=0~115938466~115938469~118851533&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&tfd=500",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/top_new.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/menu.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032474819&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AEAAAGQ&ae=a&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=2&tag_exp=0~115938466~115938469~118851533&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=scroll&_c=1&epn.percent_scrolled=90&_et=32&tfd=538",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bselogo.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/spbse.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/loader.gif",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style_high.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/highcontra.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://s.go-mpulse.net/boomerang/DZP23-UEMEM-TZZHS-5T9A2-7WLHC",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032474819&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAACAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=3&tag_exp=0~115938466~115938469~118851533&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&_et=30&tfd=575",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/font-size1.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcontrast.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcommon.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/keynavigate.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://api.bseindia.com/RealTimeBseIndiaAPI/api/GetSensexData/w",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/Menubanner.jpg",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/dict/m202605140101/gpt",
+        "resource_type": "other",
+        "post_data": null
+      }
+    ],
+    "url_after": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+    "html_path": "scratch_bse_previous_month.html"
+  },
+  {
+    "label": "older_month",
+    "range": [
+      "2026-03-01",
+      "2026-03-31"
+    ],
+    "row_count": -1,
+    "rows": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+        "resource_type": "document",
+        "post_data": "__EVENTTARGET=&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=b3OC0ic6GGmxcPqrczlvrFeJ62pLYTpyOWklZ7%2BfEj%2B%2FRehHWkFHwFfbF7OgVI01nJOHe4Bv5QSi1gOnhS7lRRQzCtf5PyRMXatX6I1syoQFfu3KPWMrNSGHICsqdpw6wnxw%2BykTZgUc6XZEnRAXw5lkfJ7THYhYYcVq80rLDALmeMs7Ym%2FDgQjZeshvefmXStTzwYUwJze11zNHq0q2Gt1ENua1UBOtKWfd2zCeOyoIk0lScRaD7Vc67atTluGsDXEni%2BTwFTCiER2V1XW8m5ofpT1g3%2FsSOCOypnVUK%2BirNRCLv38jIyqn1c6AbchcXZOm9YqvsV7q%2FeJilVZvK5%2Fcz%2BneePjIhNOSIhkpe11QsrTdPkc%2FD8orK3%2F%2FTkh9SEpOWZU3yyLTwk08OApl7kqyfLlL5lz2eczwXT%2B%2BTG%2B0MTDNLGXiNTXwlB0bZsm2ewhuGahAXfDIvi8dudp0Pgmv4QhYlb6dlnfet5api%2FEfp%2FmXxIce0%2BwGqCEFp5Gt1gi9eXOIipunVz6UJCCqKT7ITrc%2BLFQk2JfP%2F3FpdVz606NwQ0m3T%2FCWgU8kDHlgieHceCD4AiBd3oWfJ7FkCWMib%2BxI46zkffMdWIfFsAB6icaX1%2FLctAdYuOesI0u5lB%2ByxkY%2FoqmKfEpZCZH6Xh67oi%2Fr%2FkJWW4ZrJpyTLY1kBqGoAQSFUXiBauCK4MzMOcnJpsx1u%2BE1cOrLNnSfKVYQ2xXfhuoBYCXat3Mcd%2BnbmqocmXF15ClA16sKbxoSKDmwJBGILKZLuCblraHI5cr4V6TW0LtVzVd%2Frfc9SlpXQE3ayi2BprV8zr39wQQSFPXjhL7yNgECq4sQMNasq0XQ0zow1FnQKkxXK71sLfT5rJs%2BcWn7Brj5yWbLpIn3%2FvyaB%2F8hwDIJVK5D%2B0i2uBLSwc8GBdNYSooofBlSMG%2BL6iv2fUTb54omYtxFz15pKVE5XF3P1Yww9E6oQRQYplPnnM2N2OibTt5GmCAp9FPLzovRrvSza%2FDRc3RxchIa0ueO9I37C2gPph7okJUUGuYVvmo6VLovVaQ6vRsquQAc5xlakd4GAeIY4RgS41G8tlzLzfTZgzBLU1uq1mRVI%2FYTUz778wcjD%2B%2BvfnrMX7TJwFbxAUdwDk0UlmfTOoKt4Mb5vQ8mDXV494WQfOerFzNOeQunhn6k1k455BXy78NJvuNSbajAhLTTO5VF282HEfty0v%2FwMU36AwSndrnF5ewOnBfXtD%2FrG9%2FHME30euR3mhLNnr8AKTWlPVgEWF8ysX39ICqAJmyTM02oZ1SDtwFOt9HaWbZOBWNqFEUWJX91w%2F3en0gaAG22%2BEWOF3%2Bm0PDmCpUg8N%2FtGiIcSM5qghksPWSUdhFNrvs5snovF2jKF5mrzhwn4DEdbjjdQhRfMtIDfv%2BhPw1yApEQA6xKyuwESsH0u5Slnlkb9EUir9f8RS6xE8tBaLqyvb6AlZLt2Irre5ULylL%2Ba0GjG3n68EN1NVCXuD7OjSccf0ty2Y5TO%2Fv8Ng19xkOQ1C6rUPDDgZhU%2FgmBy0%2FLyFZPgx5%2Faq22RIBKldQ7AFM3q4BY4sdMLGsV9vUXIa6DTUowjw6%2FW9Ch7%2BqqfhgYQxUKyRRbouHua%2BzHBwREYrZAFa6MjalMPXCjZLvPWdWulNe%2BbGxPdezn8w9jRgHcvBkMmfPypW%2B10O68UMBv2kCI3dlWBaKT%2B%2B3VqBHcnvfqpWQDTI3szmZqoi3DVq%2F%2FAH%2B%2BIkXdvZ2n%2BJ6b8XIyqRkEu%2BG2yAPb8CGwyC4m%2F9Fj4Z2XZK5ei61eIFQyT%2BDNqM%2BGMsJpwyLg0pQ%2BBAi7my3%2F4WfiaPLZFBOD3G3uf4r02vw1I8O85ZaGkEpuh1PY%2F6fgulxSsACX2KY2KjRXegYXXuFp9%2BPLI%2FrroX154vVHQ7h6moDyCH8SAie7h4oSRyUVG3o6F9dK4RQC0n7rZR1A72Ph5Is%2Bv2EM1KXlQ6nYAB9Fs4%2FTlbZD9Xpo01gKpGhRRd3kl97zsh9%2BaZmzvpph%2FiBiH8vVsbNpm9N4ex6a0ilDmZ1PdxrLQ1QRhrOkOhjL2XqvHVkcgVE%2BiD1h2PKNiOJ9jFTHhqSZBBfd0N6l%2FHm7YT0abKNdHdhOyuCYJ%2B0p%2BzTVNbJF8CK%2B32bOkB1%2F9mn1yM4yAtocn5z9xEVaMXxA%2B1rne6Y8OUyihQKmpifxY1gW7BaQYH%2B0yZzWqIpId3eAosnuDD3b%2Bm6RfbqwgJkkFrTMASt%2Fc%2BKGox9G7c%2FxM6%2FKmE%2FSR0XlwPMWGrQ39IPP9ZGwrIojzc6NcYQv2qv8An3bCaBIC%2BufkmQxZ1RVxqtKsxvwWZL097xXPK47j1YZ6kccWABfhkInkUCKs5Xmm8cZjB5c2axZ68sdSEBNsvnJ%2BJPn6Qm640esN%2BybtXkNVAT9HRxlY4Awvvib5poeMdEHy88kGH6Xdi0kcqmuzjQpxU8u7Dwu9L3YlHJWfy%2BELjVgCudjsewfKmwCCr5xOMJmJ9slayPbMIOeEb4iIDXkS194N7GBpeqXvH6oBDd7RfJDVNk23wkVRG140DMll1AWaKwoWltNBgpar0aJb95GS9YhaDPsGhtDuouMsFk%2BBEJ%2BEzpRJ1ie0EPIwwE280gruTmDHFlo4LqwjOtiBJNMpaneLvFG4YNhpDiFhTwGNoMry4hMFJtV1Ghb%2FTRb17O0p%2BYJvFcIF28iq4hhnn1Z6%2FJeFLow1SPQygsyPam7ZQ6scq3Nku%"
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032474819&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=4&tag_exp=0~115938466~115938469~118851533&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=user_engagement&_et=1483&tfd=2064",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://www.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032474819&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=3&_s=4&tag_exp=0%7E115938466%7E115938469%7E118851533&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE+-+Notices+%26+Circulars&en=user_engagement&_et=1483&tfd=2064",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/bootstrap.css?v=1",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/font-awesome.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquerylatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.bseindia.com/include/js/google_mid.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jqueryuilatest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/jquery-ui-Latest.min.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartNewSearchPrimary.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/Eqautocomplete_sv1.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Angular/angular-sanitize.latest.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://bnotification.bseindia.com/socket.io/socket.io.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagservices.com/tag/js/gpt.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/pdficon.gif",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.ui.touch-punch.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/jquery.bootstrap-responsive-tabs.min.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262111",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/Roboto-Regular-webfont.woff",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fontawesome-webfont.woff?=4.3.0",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-brands-400.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/fonts/fa-v4compatibility.woff2",
+        "resource_type": "font",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bg.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/version.js?v=17520262130",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/AppnewController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/factoryother.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Controller/Headernew_streamController.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/smartSearch_SSUC.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/footer.aspx",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/bootstrap.min.js?v=160420261446",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202605120101/pubads_impl.js",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/5JuDgOa.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PVKM6SF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-TM52BJH9HF",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/top_new.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/D90/Header/menu.html",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032476717&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAAAAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=1&tag_exp=0~115938465~115938469&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&tfd=629",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/bselogo.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/spbse.png",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/loader.gif",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/style_high.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/css/highcontra.css",
+        "resource_type": "stylesheet",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://s.go-mpulse.net/boomerang/DZP23-UEMEM-TZZHS-5T9A2-7WLHC",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "POST",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-TM52BJH9HF&gtm=45je65d0v888160933za200zd888160933&_p=1779032476717&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1069546542&_eu=AAACAGQ&are=1&cid=1530367798.1779032463&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-in&gaf=2&_s=2&tag_exp=0~115938465~115938469&sid=1779032468&sct=1&seg=1&dl=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dr=https%3A%2F%2Fbeta.bseindia.com%2Fmarkets%2FMarketInfo%2FNoticesCircularsArchive.aspx%3Fid%3D0%26pagecont%3D%26subject%3D%26txtscripcd%3D&dt=BSE%20-%20Notices%20%26%20Circulars&en=page_view&_c=1&_ee=1&_et=24&tfd=660",
+        "resource_type": "fetch",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/font-size1.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcontrast.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/highcommon.js",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/js/keynavigate.js?v=090420251550",
+        "resource_type": "script",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://api.bseindia.com/RealTimeBseIndiaAPI/api/GetSensexData/w",
+        "resource_type": "xhr",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://beta.bseindia.com/include/images/Menubanner.jpg",
+        "resource_type": "image",
+        "post_data": null
+      },
+      {
+        "method": "GET",
+        "url": "https://securepubads.g.doubleclick.net/pagead/managed/dict/m202605140101/gpt",
+        "resource_type": "other",
+        "post_data": null
+      }
+    ],
+    "url_after": "https://beta.bseindia.com/markets/MarketInfo/NoticesCircularsArchive.aspx?id=0&pagecont=&subject=&txtscripcd=",
+    "html_path": "scratch_bse_older_month.html"
+  }
+]

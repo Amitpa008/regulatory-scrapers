@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "title": "Notification No. 6/2026: Order under clause (iia) of sub-section (1) of section 35",
+      "friendlyUrlPath": "notification-no.-6/2026-order-under-clause-iia",
+      "contentFields": [
+        {
+          "name": "circularNotificationNumber",
+          "contentFieldValue": {
+            "data": "Notification No. 6/2026 [F. No. 203/33/2026-ITA-II]"
+          }
+        },
+        {
+          "name": "reportFile",
+          "contentFieldValue": {
+            "document": {
+              "contentUrl": "/documents/d/guest/notification-6-2026-pdf",
+              "fileExtension": "pdf"
+            }
+          }
+        },
+        {
+          "name": "circularNotificationDate",
+          "contentFieldValue": {
+            "data": "2026-05-14T05:54:00Z"
+          }
+        }
+      ]
+    }
+  ],
+  "totalCount": 1
+}

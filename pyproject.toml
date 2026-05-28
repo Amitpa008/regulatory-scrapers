@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regulatory-scrapers"
+version = "0.1.0"
+description = "Production-grade scraper framework for Indian regulatory circulars and notifications."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "beautifulsoup4>=4.12.0",
+  "httpx>=0.27.0",
+  "loguru>=0.7.0",
+  "pydantic>=2.7.0",
+  "pypdf>=4.2.0",
+  "python-dateutil>=2.9.0",
+  "PyYAML>=6.0.1",
+  "tenacity>=8.2.0",
+]
+
+[project.optional-dependencies]
+playwright = [
+  "playwright>=1.45.0",
+]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools]
+include-package-data = true
+py-modules = ["models", "main"]
+
+[tool.setuptools.packages.find]
+include = ["scrapers*", "storage*", "extraction*"]

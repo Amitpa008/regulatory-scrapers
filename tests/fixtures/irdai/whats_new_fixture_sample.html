@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Whats New - IRDAI</title>
+</head>
+<body>
+  <h1>What's New</h1>
+  <form method="GET" id="filterFormByirdai">
+    <select name="selectedYear" id="selectedYear"></select>
+    <select name="selectedMonth" id="selectedMonth">
+      <option value="">Select Month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+    <label><input type="radio" id="filterArchiveOnly" name="filterArchive" value="Archive Only" />Archive Only</label>
+    <label><input type="radio" id="filterArchiveInclude" name="filterArchive" value="Include Archives" checked />Include Archives</label>
+    <button type="submit">Filter</button>
+  </form>
+  <div class="timeline" id="itemsContainer"></div>
+  <div class="row pagination">
+    <select id="pageNumber" onchange="goToPage(this.value)"></select>
+    <button onclick="prevPage()">Previous</button>
+    <button onclick="nextPage()">Next</button>
+  </div>
+  <script>
+    var currentYear = new Date().getFullYear();
+    for (var year = currentYear; year >= 2000; year--) {}
+    var itemsPerPage = 20;
+    var DLFileEntryArray = [
+      {
+        "dateId":"18-05-2026",
+        "title":" - / corrigendum - digital accessibility audit of irdai websites",
+        "subTitle":"Corrigendum - Digital Accessibility Audit of IRDAI websites",
+        "fileentryId":"9501186"
+      },
+      {
+        "dateId":"15-05-2026",
+        "title":"quotation for supply of 20-litre packaged drinking water jars for one year at irdai head office",
+        "subTitle":"NOTICE INVITING TENDER",
+        "fileentryId":"9501348"
+      },
+      {
+        "dateId":"01-01-2000",
+        "title":"legacy archive notice",
+        "subTitle":"Legacy Archive Notice",
+        "fileentryId":"12345"
+      }
+    ];
+  </script>
+</body>
+</html>

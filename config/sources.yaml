@@ -1,0 +1,311 @@
+sources:
+  apmi-documents:
+    source: apmi-documents
+    regulator: APMI
+    base_url: "https://www.apmiindia.org"
+    listing_url: "https://www.apmiindia.org/apmi/welcome.htm"
+    listing_selector: "ul.navbar-nav"
+    link_selector: "a"
+    default_document_type: "document"
+    default_category: "documents"
+    default_department: ""
+  apmi-circulars:
+    source: apmi-circulars
+    regulator: APMI
+    base_url: "https://www.apmiindia.org"
+    listing_url: "https://www.apmiindia.org/apmi/welcome.htm"
+    listing_selector: "ul.navbar-nav"
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "apmi-circulars"
+    default_department: ""
+  apmi-sebi-resources:
+    source: apmi-sebi-resources
+    regulator: APMI
+    base_url: "https://www.apmiindia.org"
+    listing_url: "https://www.apmiindia.org/apmi/welcome.htm"
+    listing_selector: "ul.navbar-nav"
+    link_selector: "a"
+    default_document_type: "resource"
+    default_category: "sebi-resources"
+    default_department: ""
+  apmi-compliance-sutra:
+    source: apmi-compliance-sutra
+    regulator: APMI
+    base_url: "https://www.apmiindia.org"
+    listing_url: "https://www.apmiindia.org/apmi/welcome.htm"
+    listing_selector: "ul.navbar-nav"
+    link_selector: "a"
+    default_document_type: "inventory"
+    default_category: "compliance-sutra"
+    default_department: ""
+  sebi:
+    source: sebi
+    regulator: SEBI
+    base_url: "https://www.sebi.gov.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "regulatory"
+    default_department: ""
+  nse:
+    source: nse
+    regulator: NSE
+    base_url: "https://www.nseindia.com"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "exchange"
+    default_department: ""
+  nse-press-releases:
+    source: nse-press-releases
+    regulator: NSE
+    base_url: "https://www.nseindia.com"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "press-release"
+    default_category: "exchange"
+    default_department: ""
+  bse:
+    source: bse
+    regulator: BSE
+    base_url: "https://www.bseindia.com"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "notice"
+    default_category: "exchange"
+    default_department: ""
+  mcx:
+    source: mcx
+    regulator: MCX
+    base_url: "https://www.mcxindia.com"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "exchange"
+    default_department: ""
+  ncdex:
+    source: ncdex
+    regulator: NCDEX
+    base_url: "https://www.ncdex.com"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "exchange"
+    default_department: ""
+  nerl:
+    source: nerl
+    regulator: NERL
+    base_url: "https://www.nerlindia.com"
+    listing_url: ""
+    listing_selector: "table"
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "circulars"
+    default_department: ""
+  cdsl:
+    source: cdsl
+    regulator: CDSL
+    base_url: "https://www.cdslindia.com"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "depository"
+    default_department: ""
+  ccrl:
+    source: ccrl
+    regulator: CCRL
+    base_url: "https://www.ccrl.co.in"
+    listing_url: ""
+    listing_selector: "table"
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "communique"
+    default_department: ""
+  nsdl:
+    source: nsdl
+    regulator: NSDL
+    base_url: "https://nsdl.co.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "depository"
+    default_department: ""
+  ifsca:
+    source: ifsca
+    regulator: IFSCA
+    base_url: "https://www.ifsca.gov.in"
+    listing_url: ""
+    listing_selector: "#tblNewSec"
+    link_selector: "a"
+    default_document_type: "update"
+    default_category: "new-section"
+    default_department: ""
+  irdai-whats-new:
+    source: irdai-whats-new
+    regulator: IRDAI
+    base_url: "https://irdai.gov.in"
+    listing_url: ""
+    listing_selector: "#itemsContainer"
+    link_selector: "a"
+    default_document_type: "whats-new"
+    default_category: "whats-new"
+    default_department: ""
+  incometax-circulars:
+    source: incometax-circulars
+    regulator: Income Tax Department / CBDT
+    base_url: "https://www.incometaxindia.gov.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "circulars"
+    default_department: ""
+  incometax-notifications:
+    source: incometax-notifications
+    regulator: Income Tax Department / CBDT
+    base_url: "https://www.incometaxindia.gov.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "notification"
+    default_category: "notifications"
+    default_department: ""
+  pfrda-recent-updates:
+    source: pfrda-recent-updates
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "recent-update"
+    default_category: "recent-updates"
+    default_department: ""
+  pfrda-circulars-active:
+    source: pfrda-circulars-active
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "circular"
+    default_category: "active-circulars"
+    default_department: ""
+  pfrda-circulars-inoperative:
+    source: pfrda-circulars-inoperative
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "circular"
+    default_category: "archived-circulars"
+    default_department: ""
+  pfrda-master-circulars-active:
+    source: pfrda-master-circulars-active
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "master-circular"
+    default_category: "active-master-circulars"
+    default_department: ""
+  pfrda-notifications:
+    source: pfrda-notifications
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "notification"
+    default_category: "notifications"
+    default_department: ""
+  pfrda-regulations:
+    source: pfrda-regulations
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "regulation"
+    default_category: "regulations"
+    default_department: ""
+  pfrda-guidelines:
+    source: pfrda-guidelines
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "guideline"
+    default_category: "guidelines"
+    default_department: ""
+  pfrda-press-releases:
+    source: pfrda-press-releases
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "press-release"
+    default_category: "press-releases"
+    default_department: ""
+  pfrda-tenders:
+    source: pfrda-tenders
+    regulator: PFRDA
+    base_url: "https://www.pfrda.org.in"
+    listing_url: ""
+    listing_selector: "div.basic-card"
+    link_selector: "a.basic-link"
+    default_document_type: "tender"
+    default_category: "tenders"
+    default_department: ""
+  rbi-notifications:
+    source: rbi-notifications
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "notification"
+    default_category: "notifications"
+    default_department: ""
+  rbi-press-releases:
+    source: rbi-press-releases
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "press-release"
+    default_category: "press-releases"
+    default_department: ""
+  rbi-master-directions:
+    source: rbi-master-directions
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "master-direction"
+    default_category: "master-directions"
+    default_department: ""
+  rbi-master-circulars:
+    source: rbi-master-circulars
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: ""
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "master-circular"
+    default_category: "master-circulars"
+    default_department: ""

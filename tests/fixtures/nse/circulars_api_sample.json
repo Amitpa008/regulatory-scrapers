@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "fileDept": "COM",
+      "circNumber": "74234",
+      "fileExt": "pdf",
+      "sub": "Liquidity Enhancement Scheme - Silver Options on Goods",
+      "cirDate": "20260516",
+      "cirDisplayDate": "May 16, 2026",
+      "circFilename": "COM74234.pdf",
+      "circFilelink": "https://nsearchives.nseindia.com/content/circulars/COM74234.pdf",
+      "circCompany": "NSE",
+      "circDisplayNo": "NSE/COM/74234",
+      "circCategory": "Trading",
+      "circDepartment": "Commodity Derivatives",
+      "circFileSize": "368 KB"
+    },
+    {
+      "fileDept": "MSD",
+      "circNumber": "74261",
+      "fileExt": "zip",
+      "sub": "Linux & Windows UDP Server - Electronic Gold Receipts Segment (EGR)",
+      "cirDate": "20260515",
+      "cirDisplayDate": "May 15, 2026",
+      "circFilename": "MSD74261.zip",
+      "circFilelink": "/content/circulars/MSD74261.zip",
+      "circCompany": "NSE",
+      "circDisplayNo": "NSE/MSD/74261",
+      "circCategory": "Trading",
+      "circDepartment": "Member Service Department",
+      "circFileSize": "563 KB"
+    },
+    {
+      "fileDept": "CMPT",
+      "circNumber": "74129",
+      "fileExt": "pdf",
+      "sub": "Revised Settlement Calendar for Takeover offer under Tender Offer scheme of kwality Wall's (India) Limited.",
+      "cirDate": "20260508",
+      "cirDisplayDate": "May 08, 2026",
+      "circFilename": "CMPT74129.pdf",
+      "circFilelink": "https://nsearchives.nseindia.com/content/circulars/CMPT74129.pdf",
+      "circCompany": "NCL",
+      "circDisplayNo": "NCL/CMPT/74129",
+      "circCategory": "Clearing",
+      "circDepartment": "NSE Clearing - Capital Market",
+      "circFileSize": "252 KB"
+    }
+  ],
+  "fromDate": "08-05-2026",
+  "toDate": "16-05-2026"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://www.ncdex.com/circulars/circular_data",
+    "status": 200,
+    "method": "POST",
+    "content_type": "application/json",
+    "response_size": 1024,
+    "post_data": "draw=1&start=0&length=50&_token=fixture-token&sf=1&st=&year=2026&month=0&dept=0&cat=0"
+  }
+]

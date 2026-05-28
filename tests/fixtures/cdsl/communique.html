@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - Eservices</title>
+    <link href="/eservices/fonts/lato.css" rel="stylesheet" />
+    <link href="/eservices/lib/btmain/css/btmain.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/eservices/css/site_outer.css?v=5QW09PVB-RP1qducy0sq9iMsKbwl1YxQQgCoYPww3YI" />
+    <link href="/eservices/css/fade-down.css" rel="stylesheet" />
+    <link href="/eservices/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/eservices/css/webslidemenu.css" rel="stylesheet" />
+    <script src="/eservices/lib/jqmain/jqmain.min.js"></script>
+    <script src="/eservices/lib/spin.js/spin.js"></script>
+    <script src="/eservices/lib/spin.js/jquery.spin.js"></script>
+    <script src="/eservices/lib/btbox/btbox.min.js"></script>
+    <script src="/eservices/lib/btmain/js/btmain.bundle.min.js"></script>
+    <script src="/eservices/js/site.js?v=cJOZZnKHWLprTnXR7GixrSB7rEUMxENCJeZwffNFDFA"></script>
+    <script src="/eservices/js/webslidemenu.js"></script>
+
+    <link href="/eservices/lib/ux4g/ux4g.css" rel="stylesheet" />
+    <script src="/eservices/lib/ux4g/ux4g.js" defer></script>
+
+    
+
+    <script src="/eservices/lib/jq-validation/jq.validatenew.min.js"></script>                   
+	<script src="/eservices/lib/jq-validation-unobtrusive/jq.validate.unobtrusive.min.js"></script>
+	<script src="/eservices/lib/datepicker/bootstrap-datepicker.min.js"></script>		
+	<script src="/eservices/lib/btbox/btbox.min.js"></script>
+	<script>
+		var LoadURL = "/eservices/Publications/GetOnLoadCommunique";
+		var GetCommData = "/eservices/Publications/CommuniquePost";
+	</script>
+	<script src="/eservices/js/communique.js"> </script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        function Exception(msg, Type) {
+            bootbox.alert({
+                title: Type,
+                message: msg
+            })
+        }
+	</script>
+
+</head>
+<body>
+
+    <script src="/eservices/js/headerNew.js"></script>
+    
+
+
+<style>
+	li{
+		padding:4px !important;
+		border:0 !important;
+	}
+    li:hover {
+        border:0px !important;
+        background:white !important;
+    }
+</style>		 
+
+<section class="content-warpper padding clr" style="padding-bottom: 0;">
+	<div class="container">
+		<div class="row">
+            <div class="breadcrumb-container">
+                <nav aria-label="Breadcrumb">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="../../index.html">
+                                Home
+                                <img src="../images/arrow.png" alt="" role="presentation" aria-hidden="true" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../Publications/InnovationSandbox.html">
+                                Depository Participants 
+                                <img src="../images/arrow.png" alt="" role="presentation" aria-hidden="true" />
+                            </a>
+                        </li>
+                        <li>
+                            Communiques / Sebi Circulars
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="print-btn">
+                    <a href="javascript:window.print()" title="Print">
+                        <img src="../images/Printer.png" alt="Print page" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="banner-container" id="section1">
+				<div class="banner-inner">
+					<div class="container p-0">
+
+						<div class="inner-banner">
+							<img src="../Images/dp-banner.png" class="img-fluid" />
+
+							<div class="header-info-div">
+								<h1 class="innter-title">Communiques / Sebi Circulars</h1>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container clr" id="section2">
+		<div class="row">
+			<div class="overview_div pt-0">
+				<div class="row">
+					<div class="col-lg-3 col-md-12 col-sm-12 padding-right">
+						<div class="text_div pt-30">
+							<h1 class="title_big">
+								Communique for
+								<br />
+								DP & RTA
+							</h1>
+						  
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-12 col-sm-12 padding-left">
+						<div class="text-div_2 pt-30 pb-100">	 
+							<div class="m-auto mb-4 col-12 col-sm-10 col-md-7 g-0 row rounded-pill " style=" overflow:hidden; border: 1px solid #025f93;">
+								<div class="form-group  row  px-0 mb-0 ms-0">
+										<div  class="col-6 text-center btnActive py-2 " style="background-color:#025f93; color:#fff">
+											<label>&nbsp;</label>
+											<div class=" custom-control custom-radio custom-control-inline"  style="width:75px;" >
+												<label>
+											
+														 Active
+												</label>
+											</div>
+										</div>
+										 <div class="col-6 text-center  btnArchive py-2" style="background-color:#fff; color:#025f93;">
+											<div class=" custom-control custom-radio custom-control-inline">
+												<label>
+														Archive
+												</label>
+											</div>
+										</div>
+								</div>
+							</div>
+
+							<form id="commForm" class="form-horizontal">				
+								<h5 class="mb-3" style="font-weight: 600; font-size: 16px;">Search Communique</h5>
+								<div class="row">
+									<div class="col-md-8 col-sm-12">
+										<div class="form-group padding-left-118">
+                                             <div class="custom-control custom-radio custom-control-inline" style="padding-left:110px">
+                                                <input type="radio" value="3" id="dpSelect" class="custom-control-input" checked data-val="true" data-val-regex="Please Select DP or RTA" data-val-regex-pattern="^(3|4)$" data-val-required="The type field is required." name="type">
+                                                <label class="custom-control-label" for="dpSelect" style="padding-left:3px;">DP</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline" style="padding-left:110px">
+                                                <input type="radio" value="4" id="rtaSelect" class="custom-control-input" name="type">
+                                                <label class="custom-control-label" for="rtaSelect" style="padding-left:3px;">RTA</label>
+                                            </div>
+											<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="type" data-valmsg-replace="true"> </span> 
+										</div>
+										<div class="form-group row mt-4 mb-2">
+											<div class="col-sm-4">
+												<label class="form-label" for="cno">Communique No:</label>
+											</div>
+											<div class="col-sm-7 col-md-8">
+												<input class="form-control custom-input" placeholder="Enter Communique No" id="cno" style="border-radius: 15px; padding: 10px;" autocomplete="on" type="text" data-val="true" data-val-regex="Only letters, numbers &amp; hyphen (-) are allowed." data-val-regex-pattern="^[a-zA-Z0-9-%]*$" name="cno" value="" />
+												<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="cno" data-valmsg-replace="true"></span>
+											</div>
+										</div>
+
+										<div class="form-group row mb-2">
+											<div class="col-sm-4 ">
+												<label class="form-label" for="fromDate">From Date:</label>
+											</div>
+											<div class="col-sm-7 col-md-8">
+												<div class="input-group date" id="fromdatepicker">
+													<input type="text" class="form-control me-2 " id="fromDate" style="border-top-right-radius:6px; border-bottom-right-radius:6px;" placeholder="Select from Date" name="fromdate" autocomplete="on" data-val="true" data-val-regex="Date must be empty or in dd-MMM-yyyy format." data-val-regex-pattern="^\s*$|^(0[1-9]|[12][0-9]|3[01])-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d{4})$" value="" />
+													<span class="input-group-append">
+														<span class="input-group-text bg-light d-block" ><i class="fa fa-calendar" style="font-size:24px"></i></span>
+													</span>
+													<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="fromDate" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group row mb-2">
+											<div class="col-sm-4">
+												<label class="form-label" for="toDate">To Date:</label>
+											</div>
+											<div class="col-sm-7 col-md-8">
+												<div class="input-group date" id="todatepicker">
+													<input type="text" class="form-control me-2" id="toDate" style="border-top-right-radius:6px; border-bottom-right-radius:6px;" placeholder="Select to Date" name="todate" autocomplete="on" data-val="true" data-val-regex="Date must be empty or in dd-MMM-yyyy format." data-val-regex-pattern="^\s*$|^(0[1-9]|[12][0-9]|3[01])-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d{4})$" value="" />
+													<span class="input-group-append">
+														<span class="input-group-text bg-light d-block"><i class="fa fa-calendar" style="font-size:24px"></i></span>
+													</span>
+													<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="toDate" data-valmsg-replace="true"></span>
+												</div>
+											
+											</div>
+										</div>
+
+										
+
+										<div class="form-group row mb-2">
+											<div class="col-sm-4">
+												<label class="form-label" for="Keyword">Keyword:</label>
+											</div>
+											<div class="col-sm-7 col-md-8">
+												<input class="form-control custom-input" id="Keyword" placeholder="Enter Keyword" style="border-radius: 15px; padding: 10px;" autocomplete="on" type="text" name="Keyword" value="" />
+												<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="Keyword" data-valmsg-replace="true"></span>
+											</div>
+										</div>
+
+
+										<div class="form-group row mb-2">
+											<div class="col-sm-4 ">
+												<label class="form-label" for="Subject">Subject:</label>
+											</div>
+											<div class="col-sm-7 col-md-8">
+												<input class="form-control custom-input" id="Subject" placeholder="Enter Subject" style="border-radius: 15px; padding: 10px;" autocomplete="on" type="text" name="Subject" value="" />
+												<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="Subject" data-valmsg-replace="true"></span>
+											</div>
+										</div>
+
+
+
+										<div class="form-group row my-2">
+
+											<div class="col-sm-7 offset-sm-4">
+												<div class="g-recaptcha" id="verifyCaptcha" data-sitekey="6Le8yS8UAAAAABVIAix4k7Z9SHCUYPRR28fO8eD_" asp-for></div>
+												<span class="text-danger field-validation-valid" style="font-size: 14px;" data-valmsg-for="GCaptcha" data-valmsg-replace="true"></span>
+											</div>
+										</div>
+
+										<div class="form-group row mb-2">
+
+											<div class="col-sm-7 col-md-8 offset-sm-4">
+												<input type="button" class="btn btn-primary col-sm-12" value="Submit" id="btnSubmit" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+
+								<div class="row mt-4" style="position:relative;">
+									<div class="col-md-4 mt-md-2" style="position:absolute;" >
+										<p id="date" style="" class="float-md-start float-end mt-md-4" >Updated on &nbsp;&nbsp;<b class="">May       15, 2026</b></p>
+									</div>
+ 
+									<div class="table-2 table-responsive col-md-12 pt-2">
+										  
+										<table id="tblCommuniqueDtl" class="table table-hover table-striped table-bordered"  cellspacing="0">
+											<thead class="header-bg-black">
+												<tr>
+							 
+													<th class="col-md-3" style="background: #284b8c;color:#fff;text-align: center">Communique No</th>
+													<th class="col-md-6" style="background: #284b8c;color:#fff;text-align: center">Subject*</th>
+													<th class="col-md-3" style="background: #284b8c;color:#fff;text-align: center">Date</th>
+											   
+												</tr>
+											</thead>
+											<tbody id="tblCommuniquDtlBody">  
+											
+										   </tbody>
+										</table> 
+									</div>
+
+									<div class="dataPagerPosition">
+										<span>
+										</span>
+									</div>
+
+								</div>
+
+								<div class="row">
+									<ul class="download_list bg-only-icon ptpb-60">
+										<li class="col-lg-9 col-md-9 col-sm-12 p-0">
+                                        <a href="https://www.cdslindia.com/Publications/DP-COMMUNIQUES-INDEX.aspx" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">DP Communique Index &nbsp;&nbsp;-&nbsp;&nbsp;as on May       15, 2026<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a>
+									</li>
+										<li class="col-lg-9 col-md-9 col-sm-12 p-0">
+                                        <a href="https://www.cdslindia.com/Publications/RTA-COMMUNIQUES-INDEX.aspx" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">RTA Communique Index &nbsp;&nbsp;-&nbsp;&nbsp;as on May       15, 2026<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a>
+									</li>
+									</ul>
+								</div>
+
+					  
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="our-business clr" id="section4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 padding-right">
+                    <div class="text_div pt-30">
+                        <h1 class="title_big">
+                            PAN Compliance Updation
+                        </h1>
+                        <!-- <h3 class="small-title" style="color: #fff;">
+                          New Products Features Functionality
+                        </h3> -->
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-12 col-sm-12 padding-left">
+                    <div class="text-div_2 pt-30">
+                        <ul class="download_list bg-only-icon ptpb-60">
+                            <li class="col-lg-8 col-md-8 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Pan updation/Update on PAN Compliance-30112025.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">Update on PAN Compliance-30112025<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                        </ul>
+
+                        <p><a href="https://www.cdslindia.com/Publications/Archive.html" target="_blank">Archive</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container clr" id="section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 padding-right">
+                    <div class="text_div pt-30">
+                        <h1 class="title_big">
+                            SEBI circulars
+                        </h1>
+                        <!-- <h3 class="small-title" style="color: #fff;">
+                          New Products Features Functionality
+                        </h3> -->
+                        <p class="tag-line">
+                            To download the SEBI circulars please click on them :
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-12 col-sm-12 padding-left">
+                    <div class="text-div_2 pt-30">
+                        <!-- <ul class="download_list bg-only-icon ptpb-60">
+                             <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="#" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">Compare tariff link - as on February 28, 2020<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                             <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="#" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">Compare tariff link - as on February 28, 2020<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                             <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="#" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">Compare tariff link - as on February 28, 2020<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                             <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="#" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">Compare tariff link - as on February 28, 2020<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                         </ul>-->
+
+                        <ul class="download_list bg bg-only-icon ptpb-60">
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-204-SEBI-CIR-RELAXATIONS-IN-CERTAIN-REPORTING-REQUIREMENT-OF-DEMAT-ACCOUNT.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI CIR- EASE OF DOING BUSINESS MEASURES - RELAXATIONS IN CERTAIN REPORTING REQUIREMENTS FOR CERTAIN STOCK BROKERS<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-353-SEBI-CIR-PROCESS-APPOINTMENT-RE-APPOINTMENT-KMP.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular –  SEBI CIR-PROCESS FOR APPOINTMENT, RE-APPOINTMENT, TERMINATION OR ACCEPTANCE OF RESIGNATION OF SPECIFIC KMPs.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-337-SEBI-CIR-NORMS-FOR-INTERNAL-AUDIT-MECHANISM-AUDIT-COMMITTEE-MIIs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI CIR-NORMS FOR INTERNAL AUDIT MECHANISM AND COMPOSITION OF THE AUDIT COMMITTEE OF MIIs.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-294-SEBI-CIR-CLARIFICATIONS-TO-CYBERSECURITY-CYBER-RESILIENCE-FRAMEWORK.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – CLARIFICATIONS TO CYBERSECURITY AND CYBER RESILIENCE FRAMEWORK FOR SEBI REGULATED ENTITIES.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-137-SEBI CIR-OPENING-OF-DEMAT-ACCOUNT-IN-THE-NAME-OF-ASSOCIATION-OF-PERSONS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Opening of demat account in the name of association of persons.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-114-SEBI CIR-REVISED-TIMELINES-FOR-ISSUANCE-OF-CAS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Revised timelines for issuance of consolidated account statement by depositories.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-78-SEBI-CIR-PARAMETERS-FOR-EXTERNAL-EVALUATION.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Parameters for external evaluation of Performance of Statutory Committees of MIIs and Mechanism for internal evaluation of Performance of MIIs and its Statutory Committees.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-730-SEBI-CIR-Master-circular-for-Depositories.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Master Circular for Depositories.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-CIRCULAR.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Enhancement in the scope of optional T+0 rolling settlement cycle in addition to the existing T+1 settlement cycle in Equity Cash Markets.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1732278574596.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Guidelines to Stock Exchanges, Clearing Corporations and Depositories.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1732186233042.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">Withdrawal of Master Circular on issuance of No Objection Certificate (NOC) for release of 1% of Issue Amount.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Relaxation-Qterly-Report-Compliance-Certificate-REITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Relaxation from certain provisions for units allotted to an employee benefit trust for the purpose of a unit based employee benefit scheme, Alignment of timelines for making distribution by REITs and Format of Quarterly Report and Compliance Certificate - Real Estate Investment Trusts (REITs).<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Relaxation-Qterly-Report-Compliance-Certificate-InvITS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Relaxation from certain provisions for units allotted to an employee benefit trust for the purpose of a unit based employee benefit scheme, Alignment of timelines for making distribution by InvITs and Format of Quarterly Report and Compliance Certificate – Infrastructure Investment Trusts (InvITs).<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI _ DP-681-SEBI-CIR-Trading-supported-by-Blocked-Amount-in-Secondary-Market.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Trading supported by Blocked Amount in Secondary Market.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-476-SEBI-Amendment-to-Master-Circular-for-REITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Amendment to Master Circular for Real Estate Investment Trusts (REITs).<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-477-SEBI-Amendment-to-Master-Circular-for-InvITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – AMENDMENT TO MASTER CIRCULAR FOR INFRASTRUCTURE INVESTMENT TRUSTS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-564-SEBI-Parameters-for-Performance-Evaluation-of-MII.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – PARAMETERS FOR PERFORMANCE EVALUATION OF MARKET INFRASTRUCTURE INSTITUTIONS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-162-SEBI-Master-Circular-on-Surveillance-of-Securities-Market.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI MASTER CIRCULAR ON SURVEILLANCE OF SECURITIES MARKET.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1722923635717.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – AMENDMENT TO MASTER CIRCULAR FOR INFRASTRUCTURE INVESTMENT TRUSTS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1722923838435.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Amendment to Master Circular for Real Estate Investment Trusts (REITs).<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-402-SEBI-CIR-MODIFICATION-TO-ENHANCED-SUPERVISION-OF-STOCK.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI CIR - MODIFICATION TO ENHANCED SUPERVISION OF STOCK BROKERS AND DEPOSITORY PARTICIPANTS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-367-SEBI-Dispatch of Consolidated-Account-Statement-for-all-securities.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI CIR - DISPATCH OF CONSOLIDATED ACCOUNT STATEMENT (CAS) FOR ALL SECURITIES ASSETS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-364-SEBI-CIR-Charges-levied-by-Market-Infrastructure-Institutions .pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – CHARGES LEVIED BY MARKET INFRASTRUCTURE INSTITUTIONS – TRUE TO LABEL.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP--358-SEBI-CIR-FACILITY-FOR-BASIC-SERVICES-DEMAT-ACCOUNT-(BSDA).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – FACILITY FOR BASIC SERVICES DEMAT ACCOUNT (BSDA) FOR FINANCIAL INCLUSION AND EASE OF INVESTING.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-352-SEBI-CIR-Statutory-Committees-at-Market-Infrastructure-Institutions.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – STATUTORY COMMITTEES AT MARKET INFRASTRUCTURE INSTITUTIONS (MIIS).<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-289-SEBI-CIR-Investor-Charter-for-Depositories-and-Depository-Participants.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI CIR - INVESTOR CHARTER FOR DEPOSITORIES AND DEPOSITORY PARTICIPANTS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-282-SEBI-CIR-NORMS-FOR-SHARING-OF-REAL-TIME-PRICE-DATA-TO-THIRD-PAR-TIES.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – NORMS FOR SHARING OF REAL TIME PRICE DATA TO THIRD PARTIES.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-295-SEBI-Master-Circular-for-Foreign-Portfolio-Investors.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI MASTER Circular – FOR FOREIGN PORTFOLIO INVESTORS, DESIGNATED DEPOSITORY PARTICIPANTS AND ELIGIBLE FOREIGN INVESTORS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-302-SEBI-CIR-Enhancement-operational-efficiency-Risk-Reduction.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – ENHANCEMENT OF OPERATIONAL EFFICIENCY AND RISK REDUCTION - PAY-OUT OF SECURITIES DIRECTLY TO CLIENT DEMAT ACCOUNT.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-317-SEBI-CIR-Non-submission-Updation-of-Choice-of-Nomination.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – UPDATION OF CHOICE OF NOMINATION.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-329-SEBI-Modification-Framework-OFS-of-Shares-to-Employees.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – MODIFICATION IN FRAMEWORK FOR OFFER FOR SALE (OFS) OF SHARES TO EMPLOYEES THROUGH STOCK EXCHANGE MECHANISM.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-330-SEBI-MASTER-CIR-FOR-REAL-ESTATE-INVESTMENT-TRUSTS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI MASTER CIRCULAR FOR REAL ESTATE INVESTMENT TRUSTS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-331-SEBI-MASTER-CIR-FOR-Infrastructure Investment Trusts .pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI MASTER CIRCULAR FOR INFRASTRUCTURE INVESTMENT TRUSTS.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-332-SEBI-MASTER-CIR-for-Credit-Rating-Agencies.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI MASTER CIRCULAR FOR CREDIT RATING AGENCIES.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-333-SEBI-MASTER-CIR-Debenture-Trustees.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SEBI MASTER CIRCULAR FOR DEBENTURE TRUSTEES.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-CIR-Master-Circular-for-Alternative-Investment-Funds.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">MASTER CIRCULAR FOR ALTERNATIVE INVESTMENT FUNDS<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP--57-SEBI-CIR-Framework-for-OFS-Shares-Employees.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">FRAMEWORK FOR OFFER FOR SALE (OFS) OF SHARES TO EMPLOYEES THROUGH STOCK EXCHANGE MECHANISM<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-71-SEBI-CIR-Framework-for-Short-Selling.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">FRAMEWORK FOR SHORT SELLING <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-Circular -Operational-Modalities-for-T-plus-0-Settlements.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular –  Introduction of Beta version of T+0 rolling settlement cycle on optional basis in addition to the existing T+1 settlement cycle in Equity Cash Markets. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-CIR-SAFEGUARDS-TO-ADDRESS-THE-CONCERNS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – SAFEGUARDS TO ADDRESS THE CONCERNS OF THE INVESTORS ON TRANSFER OF SECURITIES IN DEMATERIALIZED MODE. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-145-SEBI-Online-Resolution-of-Disputes-in-Indian-Securities-Mkt.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Extending Framework For Restriction Of Trading by Designated Persons. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-149-Master-Circular-for-Alternative-Investment-Funds.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular –  Master Circular For  Alternative Investment Funds (AIFs). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-150-SEBI-Master-Circular-for-Credit-Rating-Agencies.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI - Master Circular For Credit Rating Agencies. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-155-SEBI-Master-Circular-for-Compliance-of-SEBI-by-listed-entity.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Master Circular For Compliance With Provision Of SEBI by Listed Entities. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-157-SEBI-Offer-for-Sale-framework-for-sale-of-units-of-REit-INVit.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Offer For Sale Framework For Sale Of Units Of REITs and InvITs. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-162-SEBI-Master-Circular-for-InvITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI MASTER - Circular For Inftrastructure Investment Trusts  (InvITs). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-164-SEBI-Master-Circular-for-Debenture-Trustee.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Master Circular For Debenture Trustees. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA--171-SEBI-Online-Resolution-of-Disputes.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Master Circular For Online Resolution Of Disputes In The Indian Securities Market. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-179-SEBI-Mandating-additional-disclosures-by-FPI.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Mandating Additional Disclosures by Foreign Portfolio Investors. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-185-SEBI-New-Format-of-Abridged-Prospectus-for-public-issues.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – New Format Of Abridged Prospectus For Public Issues. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-193-SEBI-Board-nomination-rights-to-unitholders-of-InvITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Board Nomination Rights To Unitholders Of Inftrastructure Investment Trusts(INVITS). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-194-SEBI-Board-nomination-rights-to-unitholders-of-ReITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular – Board Nomination Rights To Unitholders Of Real Estate Investment Trusts (REITS). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-218-SEBI-Master-Circular-for-Depositories.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Master Circular for Depositories. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-215-SEBI-Relaxation-from-Compliance.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Limited Relaxation From Compliance With Certain Provisions Of The SEBI Regulations, 2015. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-235-SEBI-REV-ACHIEVING-MIN-PUBLIC-UNITHOLDING-REQ.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Revision in Manner Of Achieving Minimum Public Unitholding Requirement - InvITS. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-242-SEBI-PROCEDURAL-FRAMEWORK-DEALING-WITH-UNCLAIMED-AMOUNTS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular – Procedural Framework For Dealing With Unclaimed Amounts Lying  With Entities. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-249-SIMPLIFIED-NORMS-FOR-PROCESSING-INVESTORS-SERVICE-REQUESTS-BY-RTAs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Simplified norms for Processing Investor's Service Requests by RTAs. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-676-SEBI-SIMPLIFIED NORMS FOR PROCESSING INVESTORS SERVICE .pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Simplified norms for Processing Investor's Service Requests by RTAs. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-660-SEBI-PROCEDURAL-FRAMEWORK-DEALING-WITH-UNCLAIMED-AMOUNTS.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Procedural Framework For Dealing With Unclaimed Amounts Lying  With Entities.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-595-SEBI-Master-Circular-for-Depositories.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI - Master Circular For Depositories. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-642-SEBI-REV-ACHIEVING-MIN-PUBLIC-UNITHOLDING-REQ.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular - Revision in Manner Of Achieving Minimum Public Unitholding Requirement - InvITS. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-553-SEBI-Redressal-of-investor-grievances-through-the-SCORES.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Redressal  Of Investor Grievances  Through The SEBI Complaint Redressal(SCORES) Platform. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-538-SEBI-Board-nomination-rights-to-unitholders-of-ReITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Board Nomination Rights To Unitholders Of Real Estate Investment Trusts (REITS). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-537-SEBI-Board-nomination-rights-to-unitholders-of-InvITs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Board Nomination Rights To Unitholders Of Inftrastructure Investment Trusts(INVITS). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-474-SEBI-Master-Circular-for-Debenture-Trustees.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Master Circular For Debenture Trustees. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-505-SEBI-Mandating-additional-disclosures-by-FPI.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Mandating Additional Disclosures by Foreign Portfolio Investors. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-471-SEBI-Master-Circular-for-REit.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Master Circular for Real Estate Investment Trusts (REITS). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-455-SEBI-Master-Circular-for-Compliance-of-SEBI-by-listed-entity.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Master Circular for Compliance With Provision Of SEBI by Listed Entities. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-382-SEBI-Master-Cir-for-Issue-of-Capital-and-Disclosure-Requirements.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – SEBI Master CIR For Issue Of Capital and Disclosure Requirements. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-470-SEBI-Facility-to-remedy-erroneous-transfers-in-demat-accounts.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Facility to Remedy Erroneous Transfers In Demat Accounts. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-389-SEBI-Cir-Trading-supported-by-Blocked-Amount-in-Secondary-Market.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Trading Supported by Blocked Amount In Secondary Market.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-469-SEBI-Master-Circular-for-INVit.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Master Circular For Infrastructure Investment Trusts (InvITs).<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-457-SEBI-Offer-for-Sale-framework-for-sale-of-units-of-REit-INVit.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Offer For Sale Framework For Sale OF Units Of Real Estate Investment Trusts (REITS) And Infrastructure Investment Trusts (INVITS). <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-417-SEBI-Extending-Framework-for-Trading-Restriction.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Extending Framework For Restriction Of Trading by Designated Persons.<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-454-SEBI-Master-Circular-for-issue-and-listing-Debt-CP-Security.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular - Master Circular For Issue And Listing Of Non Convertible Securities, Securitised Debt Instruments,Security Receipts, Muncipal Debt Securities And Commercial. <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI CIRCULAR - Issuance of units of AIFs in dematerialised form.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Issuance of units of AIFs in dematerialised form <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI -Mandating additional disclosures by Foreign Portfolio Investors (FPIs).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular-Facility to remedy erroneous transfers in demat accounts<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular- Trading supported by Blocked Amount in Secondary Market.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular- Trading supported by Blocked Amount in Secondary Market <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Implementation of circular on upstreaming of clients’ funds by Stock Brokers (SBs) <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circulars_Online Resolution of Disputes in the Indian Securities Market.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circulars - Online Resolution of Disputes in the Indian Securities Market.pdf<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+
+
+
+
+
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/Annexure.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular –  Extending framework for restricting trading by Designated Persons (“DPs”) by freezing PAN at security level to all listed companies in a phased manner<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1686227261689.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular –  Upstreaming of clients’ funds by Stock Brokers (SBs) / Clearing Members (CMs) to Clearing Corporations (CCs)<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1684493716856.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Risk disclosure with respect to trading by individual traders in Equity Futures & Options Segment<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1681993430757.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Issue of Master Circular by Stock Exchanges, Clearing Corporations and Depositories<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1680002505473.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Norms for Scheme of Arrangement by unlisted Stock Exchanges, Clearing Corporations and Depositories<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1679975328821.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Nomination for Eligible Trading and Demat Accounts – Extension of timelines for existing account holders<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1679050146255.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Common and simplified norms for processing investor’s service requests by RTAs and norms for furnishing PAN, KYC details and Nomination<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1676529282739.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Maintenance of a website by stock brokers and depository participants<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1676462081674.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Introduction of Issue Summary Document (ISD) and dissemination of issue advertisements<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1675870495404.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Clarification w.r.t. issuance and listing of perpetual debt instruments, perpetual non-cumulative preference shares and similar instruments under Chapter V of the SEBI (Issue and Listing of Non-convertible Securities) Regulations, 2021<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1673075862838.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Operational Circular for Credit Rating Agencies<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1669273537000.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – “Disclosures and compliance requirements for Issuance and Listing of Municipal Debt Securities under SEBI (Issue and Listing of Municipal Debt Securities) Regulations, 2015, which fall within the definition of “green debt security”<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1669632537807.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Procedure for seeking prior approval for change in control<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1669805445293.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular – Review of timelines for listing of securities issued on a private placement basis<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/1666865274914.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular - Block Mechanism in demat account of clients undertaking sale transactions - Clarification<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/Corrigendum to Master Circular for Depositories dated February 05, 2021 on Opening of demat account in case of HUF_1.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular - Corrigendum to Master Circular for Depositories dated February 05, 2021 on Opening of demat account in case of HUF<i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Framework for restricting trading by Designated Persons by freezing PAN at security level.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Trading Window closure period under Clause 4 of Schedule B read with Regulation 9 of SEBI (Prohibition of Insider Trading) Regulations, 2015 (“PIT Regulations”) – Framework for restricting trading by Designated Persons (“DPs”) by freezing PAN at security level
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Automation of Continual Disclosures.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Automation of Continual Disclosures - System driven disclosures - Ease of doing business
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Publishing Investor Charter and Disclosure of Complaints by RTA.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Publishing Investor Charter and Disclosure of Complaints by Registrar and Share Transfer Agents (RTAs) on their Websites
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Clarifications on Common and simplified norms for processing.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Clarifications on Common and simplified norms for processing investor’s service request by RTAs
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Discontinuation of usage of pool accounts for transactions in the units of Mutual Funds Clarifications with respect to Circulars dated October 4, 2021.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Discontinuation of usage of pool accounts for transactions in the units of Mutual Funds: Clarifications with respect to Circulars dated October 4, 2021
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Disclosures in the abridged prospectus and front cover page of the offer document.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Disclosures in the abridged prospectus and front cover page of the offer document
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Issuance of Securities in dematerialized form in case of Investor Service Requests.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Issuance of Securities in dematerialized form in case of Investor Service Requests
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Discontinuation of usage of pool accounts for transactions in the units of Mutual Funds, Two Factor Authentication (2FA) for redemption.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Discontinuation of usage of pool accounts for transactions in the units of Mutual Funds, Two Factor Authentication (‘2FA’) for redemption and other related requirements: Extension of timeline
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Corrigendum to Master Circular for Depositories dated February 05, 2021 on Opening of demat account in case of HUF.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Corrigendum to Master Circular for Depositories dated February 05, 2021 on Opening of demat account in case of HUF
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Framework for operationalizing the Gold Exchange in India.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Framework for operationalizing the Gold Exchange in India
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Automation of disclosure requirements under SEBI (Substantial Acquisition of Shares and Takeovers) Regulations, 2011-System Driven Disclosures - Ease of doing business..pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Automation of disclosure requirements under SEBI (Substantial Acquisition of Shares and Takeovers) Regulations, 2011-System Driven Disclosures - Ease of doing business
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Schemes of Arrangement by Listed Entities.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Schemes of Arrangement by Listed Entities
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Trading features pertaining to the Electronic Gold Receipts (EGR) segment.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Trading features pertaining to the Electronic Gold Receipts (EGR) segment
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Schemes of Arrangement by Listed Entities - Clarification w.r.t. timing of submission of NOC from the lending scheduled commercial banks financial institutions debenture trustee.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Schemes of Arrangement by Listed Entities - Clarification w.r.t. timing of submission of NOC from the lending scheduled commercial banks/ financial institutions/ debenture trustee
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular (3).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Disclosure of holding of specified securities and Holding of specified securities in dematerialized form
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Introduction of Unified Payments Interface (UPI) mechanism for Infrastructure Investment Trusts.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Introduction of Unified Payments Interface (UPI) mechanism for Infrastructure Investment Trusts
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Modification in Cyber Security and Cyber resilience framework for Stock.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Modification in Cyber Security and Cyber resilience framework for Stock Brokers / Depository Participants
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Modification to Standard Operating Procedure in the cases of Trading Member  Clearing Member leading to default.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Modification to Standard Operating Procedure in the cases of Trading Member / Clearing Member leading to default
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Standard Operating Procedures (SOP) for dispute resolution available under the stock exchange arbitration mechanism for disputes between a listed company.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Standard Operating Procedures (SOP) for dispute resolution available under the stock exchange arbitration mechanism for disputes between a listed company and its shareholder(s)/ investor(s)
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Common Simplified Norms Processing Investors Service.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Common and Simplified Norms for processing investor’s service request by RTAs
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <!--<li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/Common Simplified Norms Relating to Investor Service.PDF" target="_blank"  style="padding-top: 0; padding-bottom: 0; padding-right: 0;">SEBI Circular - Common and Simplified Norms for processing investor’s service request by RTAs
+    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>-->
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Nomination for Eligible Trading and Demat Accounts.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Nomination for Eligible Trading and Demat Accounts
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Modification in Cyber Security and Cyber resilience framework for Stock Brokers  Depository Participants.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Modification in Cyber Security and Cyber resilience framework for Stock Brokers / Depository Participants
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Introduction of Unified Payments Interface (UPI) mechanism for Real Estate Investment Trusts.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Introduction of Unified Payments Interface (UPI) mechanism for Real Estate Investment Trusts
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Simplification of procedure and standardization of formats of documents for issuance of duplicate securities certificates.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Simplification of procedure and standardization of formats of documents for issuance of duplicate securities certificates
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Simplification of procedure and standardization of formats of documents.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Simplification of procedure and standardization of formats of documents for transmission of securities
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Operational Circular for issue and listing of Non-convertible Securities, Securitised Debt Instruments, Security Receipts, Municipal Debt Securities and Commercial Paper.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Operational Circular for issue and listing of Non-convertible Securities, Securitised Debt Instruments, Security Receipts, Municipal Debt Securities and Commercial Paper
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Introduction of T plust 1 rolling settlement on an optional basis.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Introduction of T+1 rolling settlement on an optional basis
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Security and Covenant Monitoring using Distributed Ledger Technology.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Security and Covenant Monitoring’ using Distributed Ledger Technology
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular(1).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Amendment To Investor Grievance Redressal Mechanism
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Implementation of Circular on Execution of Demat Debit and Pledge Instruction (DDPI) for transfer of securities towards deliveries.PDF" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Implementation of Circular on ‘Execution of ‘Demat Debit and Pledge Instruction’ (DDPI) for transfer of securities towards deliveries / settlement obligations and pledging / re-pledging of securities’ – Extension
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Naming  Tagging of demat accounts maintained by Stock Brokers.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Naming / Tagging of demat accounts maintained by Stock Brokers
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Standard Operating Procedures (SOP) for dispute resolution under the Stock Exchange arbitration mechanism for disputes between a Listed Company.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Standard Operating Procedures (SOP) for dispute resolution under the Stock Exchange arbitration mechanism for disputes between a Listed Company and/or Registrars to an Issue and Share Transfer Agents (RTAs) and its Shareholder(s)/Investor(s)
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Streamlining the Process of Rights Issue.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Streamlining the Process of Rights Issue
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Execution of Demat Debit and Pledge Instruction (DDPI) for transfer of securities towards deliveries.PDF" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Execution of ‘Demat Debit and Pledge Instruction’ (DDPI) for transfer of securities towards deliveries / settlement obligations and pledging / re-pledging of securities
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Investor Grievance Redressal Mechanism.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Amendment to comprehensive review of Investor Grievance Redressal Mechanism
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Operational Circular for Issue and Listing.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - Operational Circular for Issue and Listing
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-5547-SEBI-Notification-Ticker-on-Website-of-DPs-for-Investor-Awareness.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - TICKER ON YOUR WEBSITE FOR INVESTOR AWARENESS
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4677-SEBI-Notification-Information-on-Website-of-DPs-for-KYC.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - INFORMATION ON WEBSITE OF DEPOSITORY PARTICIPANTS (DPs) FOR KYC
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4671-SEBI-Notification-Ticker-on-DPs-Website-for-SMS-Alerts.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - TICKER ON WEBSITE OF DEPOSITORY PARTICIPANTS (DPs) FOR SMS ALERTS
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/20210616 Circular for Inlcusion of Listed Debt Securities in System Driv....pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - SYSTEM DRIVEN DISCLOSURES FOR INCLUSION OF LISTED DEBT SECURITIES
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Standard Operating Procedure in the cases of Trading Member - Clearing M....pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular - STANDARD OPERATING PROCEDURE IN THE CASES OF TRADING MEMBER CLEARING MEMBER
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-229-SEBI-Relaxation-in-timelines-for-compliance (2 files merged).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular- RELAXATION IN TIMELINES FOR COMPLIANCE WITH REGULATORY REQUIREMENTS   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-203-Clarification-on-KYC-Process-and-Use-of-Technology.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular- CLARIFICATION ON KYC PROCESS AND USE OF TECHNOLOGY FOR KYC   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-201-SEBI-Relaxation-in-timelines-for-compliance.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular- RELAXATION IN TIMELINES FOR COMPLIANCE WITH REGULATORY REQUIREMENTS   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-198-SEBI-Relaxation-in-time-period-for-certain-activities.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular- RELAXATION IN TIME PERIOD FOR CERTAIN ACTIVITIES   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-58-SEBI-Additional-relaxations-clarifications-in-relation-to-complia....pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular- ADDITIONAL RELAXATIONS CLARIFICATIONS IN RELATION TO COMPLIANCE   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-115-SEBI-Circular-Margin-obligations-of-Pledge-Re-pledge.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular MARGIN OBLIGATIONS TO BE GIVEN BY WAY OF PLEDGE/ RE-PLEDGE IN THE DEPOSITORY SYSTEM
+
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-580-SEBI-Circular-Mapping-of-Unique-Client-Code-with-Demat-Accounts.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular MAPPING OF UNIQUE CLIENT CODE WITH DEMAT ACCOUNTS OF THE CLIENTS   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0"><a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-133-SEBI-Cir-Due-Diligence-for-Dematerialization-of-Physical-Sec.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;"> SEBI Circular ENHANCED DUE DILIGENCE FOR DEMATERIALIZATION OF PHYSICAL SECURITIES   <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i></a></li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI_Database for Distinctive Number (DN) of Shares - Action against non-compliant companies .pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+
+                                    SEBI_Database for Distinctive Number (DN) of Shares - Action against non-compliant companies
+
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-304-SEBI-Circular-Circular-on-Handling-of-Clients-Securities-by-TM-CM.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular Handling of Clients' Securities by Trading Members/Clearing Members
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-12-SEBI-Circular-AI-and-ML-Applications.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – FRAMEWORK FOR THE PROCESS OF ACCREDITATION OF INVESTORS FOR THE PURPOSE OF INNOVATORS GROWTH PLATFORM
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI- Circular- Advisory Committee at MIIs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Advisory Committee at Market Infrastructure Institutions (MIIs)
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-Circular-Committees at MIIs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Committees at Market Infrastructure Institutions (MIIs)
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-145-SEBI-Circular-Cyber-Security-Cyber Resilience-framework.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI Circular – Clarification to Cyber Security &amp; Cyber Resilience Framework for
+                                    Stock Brokers / Depository Participants
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular-Performance review of Public Interest Directors.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular – Performance Review of Public Interest Directors (PIDs)
+
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-12-SEBI-Circular-AI-and-ML-Applications.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular - Artificial Intelligence and Machine learning Applications
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-50-SEBI-Circular-Clarification-In-SEBI-DandP-Regulations-2018.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular - Clarifications in SEBI (Depositories and Participants) Regulations,
+                                    2018
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-30-SEBI-Circular-Acceptance-Probate-of-will-or-Will.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular- Acceptance of Probate of Will Or Will for Transmission of Securities
+                                    Held In Dematerialized Mode
+
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-301-SEBI-Interest-and-Dividend-Information-Reporting.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    DP-301-SEBI Interest and Dividend Information Reporting
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/RTA-37-SEBI-Interest-Dividend-Information-Reporting.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    RTA-37-SEBI Interest Dividend Information Reporting
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-Circular Recording-of-Non-Disposal-Undertaking-in-Depository-System.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular - Recording Of Non Disposal Undertaking (NDU)
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-228-SEBI-Circular-Online-Registration-Mechanism-for-Securities-Market.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI CIRCULAR - ONLINE REGISTRATION MECHANISM FOR SECURITIES MARKET INTERMEDIARIES
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-5990-SEBI-Circular-framework-of-position-limits.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI CIRCULAR – Review of the framework of position limits for currency derivatives
+                                    contracts
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/CIRCULAR on IPF of Depositories.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular- Investor Protection Fund (IPF) of Depositories
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-6160-SEBI-Circular-Enhanced-Supervision-of-Stock-Brokers-DPs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Enhanced Supervision of Stock Brokers DPs
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-5673-SEBI-Circular-Revised-App-Form-and-Manner-of-Disc.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI CIRCULAR - REVISED CONTENTS OF APPLICATION-CUM-BIDDING FORM AND MANNER OF DISCLOSURE
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-5410-SEBI-Circular-of-MCAA-and-FATCA.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+                                    SEBI circular - Implementation Of The Multilateral Competent Authority Agreement
+                                    (MCAA) and Foreign Accounts Tax Compliance Act (FATCA)
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-general order.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI General Order – Prohibition on Raising Further Capital from Public and Transfer
+                                    of Securities of Suspended Companies
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4910-SEBI-Registration-for-the-purpose-of-Foreign-Accounts-Tax-Compliance-Act.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI Circular - Registration for the purpose of Foreign Accounts Tax Compliance
+                                    Act
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4908-SEBI-Single-Registration-for-Depository-Participant.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI CIRCULAR – Single Registration for Deopsitory Participants
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4891-SEBI-Circular-Redressal-of-Investor-Grievances- through-SCORES.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI CIRCULAR - Redressal of investor grievances through SEBI complaints redress
+                                    system(SCORES) platform as on December 22,2014
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4816-SEBI-Circular-CAS-for-All-Securities-Assets.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;">
+
+                                    SEBI CIRCULAR – Consolidated account statement (CAS) for all securities assets
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4548-SEBI-Circular-Inter-Govt-Agreement-with-USA.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular – Inter-Governmental agreement with United States of America under
+                                    Foreign Accounts as on June 30, 2014
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4558-SEBI-Circular-Delivery-Instruction-Slip-Issuance-and-Processing.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Delivery Instruction Slip (DIS) Issuance And Processings- as on
+                                    July 04, 2014
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4546-SEBI-Circular-Dispatch-of-Physical-Stmts-to-BOs.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Dispatch Of Physical Statements To BOS Having Zero Balance And Nil
+                                    Transactions- as on July 01, 2014
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-4095-SEBI-Circular-Simplification-of-Demat-Account-Opening Process.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Simplification-of-Demat-Account-Opening Process- as on December
+                                    05, 2013
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular - Review of  Securities Lending and  Borrowing (SLB) Framework.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Review of Securities Lending and Borrowing (SLB) Framework - as
+                                    on November 22, 2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Guidelines on Identification of Beneficial Ownership.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    Guidelines on Identification of Beneficial Ownership - as on January 24, 2013
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Change of name in the BO Account.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    Change of name in the BO Account - as on November 01, 2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Addendum to SEBI Circular on Activation of ISIN in case of additional issue of shares-securtiies.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    Addendum to SEBI Circular on Activation of ISIN in case of additional issue of shares-securtiies
+                                    - as on September 11, 2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular - Facility for a Basic Services Demat Account (BSDA).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Facility for a Basic Services Demat Account (BSDA) - as on August
+                                    27, 2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular - Activation of ISIN in case of additional issue of shares - securities.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    SEBI Circular - Activation of ISIN in case of additional issue of shares - securities
+                                    - as on August 02, 2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular-Rajiv Gandhi Equity Savings Scheme, 2012.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    Rajiv Gandhi Equity Savings Scheme 2012- as on December 6,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular - Printing-of-Grievances-Redressal-Mechanism on Delivery Instruction Form Book.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    Printing of Grievances Redressal Mechanism on Delivery Instruction Form Book - as
+                                    on September 24,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/Uploading of the Existing Clients KYC details in the KRA system by the intermediaries.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular">
+
+                                    Uploading of the existing clients' KYC details in the KYC Registration Agency (KRA)
+                                    system by the intermediaries - as on May 18,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-Circular-Guidelines-Outsourcing-Activies.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI-Circular-Guidelines-Outsourcing-Activies">
+
+
+
+                                    Guidelines-Outsourcing-Activities - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular -Guidelines in pursuance of the SEBI KYC Registration Agency (KRA).pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI Circular - Guidelines in pursuance of the SEBI KYC Registration Agency (KRA)">
+
+                                    Guidelines in pursuance of the SEBI KYC Registration Agency (KRA) - as on January
+                                    4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Cir- Demat of promoters holding.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="SEBI CIRCULAR – Extension of Deadline for 100% demat of Promoter Holding">
+
+                                    Extension of Deadline for 100% demat of Promoter Holding - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI Circular.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="">
+
+                                    Redressal of investor grievances against Depository Participants (DPs) in sebi complaints
+                                    redress system (SCORES) - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEB Circular- Revised procedure for seeking prior approval for change in.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Revised Procedure for Seeking Prior Approval For Change In Control Through Single Window">
+
+                                    Revised Procedure for Seeking Prior Approval For Change In Control Through Single
+                                    Window - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-2515-SEBI-Circular-17062011.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="">
+
+                                    Reporting changes in status or constitution of Depository Participants - as on January
+                                    4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-2432-SEBI-Circular-27042011.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="REVIEW OF ANNUAL ISSUERS’ CHARGES">
+
+                                    Review of annual issuer's charges - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-2412-SEBI-Circular-07042011.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Limitation Period For Filing an Arbitration Reference">
+
+                                    Limitation Period For Filing an Arbitration Reference - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-2370-SEBI-Circular-24032011-Unauthenticated-News.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Unauthenticated news circulated by sebi registered market intermediaries through various modes of communication">
+
+                                    Unauthenticated news circulated by sebi registered market intermediaries through
+                                    various modes of communication - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI- Circular-06092010.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Clarification on submission of Audit Report">
+                                    Clarification on submission of Audit Report - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/DP-2037-SEBI-Circular-01072010-AMC-Charges.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Account Maintenance Charges">
+
+                                    Account Maintenance Charges - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-Circular-29072010-PAN-Mandatory.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Mandatory requirement of Permanent Account Number (PAN)">
+
+
+
+                                    Mandatory requirement of Permanent Account Number (PAN) - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                            <li class="col-lg-10 col-md-10 col-sm-12 p-0">
+                                <a href="https://www.cdslindia.com/downloads/Publications/Communique/SEBI-Circular-dated-23042010.pdf" target="_blank" style="padding-top: 0; padding-bottom: 0; padding-right: 0;" title="Execution of Power of Attorney (PoA)">
+
+                                    Execution of Power of Attorney (PoA) - as on January 4,2012
+
+                                    <i><img src="https://www.cdslindia.com/IncludesNew/images/common/pdf-icon-white.png"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</section>
+
+<style>
+
+	.text-div_2 {
+		border-left: dotted 1px #ccc;
+	}
+</style>
+
+
+
+
+
+    <script src="/eservices/js/footerNew.js"></script>
+
+    <!-- DataTables CSS -->
+    <link href="/eservices/lib/datatables/jquery.datatables.min.css" rel="stylesheet" />
+    <link href="/eservices/lib/datatables/datatables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="/eservices/lib/datatables/responsive.datatables.min.css" rel="stylesheet" />
+    <link href="/eservices/lib/datepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+    <!-- DataTables JS -->
+    <script src="/eservices/lib/datatables/jquery.datatables.min.js"></script>
+    <script src="/eservices/lib/datatables/datatables.bootstrap5.min.js"></script>
+    <script src="/eservices/lib/datatables/datatables.responsive.min.js"></script>
+    <script src="/eservices/lib/datatables/datatables.buttons.min.js"></script>
+    <script src="/eservices/lib/datatables/responsive.bootstrap5.min.js"></script>
+    <script src="/eservices/lib/datatables/buttons.html5.min.js"></script>
+
+    <!-- Datepicker JS -->
+    <script src="/eservices/lib/datepicker/bootstrap-datepicker.min.js"></script>
+
+    <script src="/eservices/lib/typeahead/bootstrap3-typeahead.js"></script>
+
+</body>
+</html>

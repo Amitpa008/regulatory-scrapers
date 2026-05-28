@@ -1,0 +1,31 @@
+{
+  "draw": 1,
+  "recordsTotal": 223,
+  "recordsFiltered": 223,
+  "data": [
+    {
+      "date": "15-May-2026",
+      "number": "NCDEX/Member Tech Compliance-010/2026",
+      "department": "Member Tech Compliance",
+      "subject": "Submission of VAPT Report for the FY 2025-26",
+      "en_file": "<a href=\"/public/uploads/circulars/english/2026/NCDEX-MTC-010-2026.pdf\" target=\"_blank\">English</a>",
+      "hn_file": ""
+    },
+    {
+      "date": "14-May-2026",
+      "number": "NCCL/MEMBERSHIP-005/2026",
+      "department": "NCCL",
+      "subject": "Norms for sharing and usage of price data for educational purposes",
+      "en_file": "<a href=\"https://www.ncdex.com/public/uploads/circulars/english/2026/NCCL-MEMBERSHIP-005-2026.pdf\">English</a>",
+      "hn_file": ""
+    },
+    {
+      "date": "13-May-2026",
+      "number": "NCDEX/TRADING-016/2026",
+      "department": "Trading",
+      "subject": "Norms for Sharing and Usage of Price Data for Educational Purposes",
+      "en_file": "<a href=\"/public/uploads/circulars/english/2026/NCDEX-TRADING-016-2026.pdf\">English</a>",
+      "hn_file": ""
+    }
+  ]
+}

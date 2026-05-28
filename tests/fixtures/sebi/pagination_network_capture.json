@@ -1,0 +1,82 @@
+{
+  "page_1": {
+    "method": "GET",
+    "url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes",
+    "query_params": {
+      "doListingAll": [
+        "yes"
+      ]
+    },
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "en-IN,en;q=0.9"
+    },
+    "transport": "httpx"
+  },
+  "pagination_requests": [
+    {
+      "page": 2,
+      "method": "POST",
+      "url": "https://www.sebi.gov.in/sebiweb/ajax/home/getnewslistallinfo.jsp",
+      "query_params": {},
+      "form_payload": {
+        "nextValue": "1",
+        "next": "n",
+        "search": "",
+        "fromDate": "",
+        "toDate": "",
+        "deptId": "-1",
+        "sid": "-1",
+        "ssid": "-1",
+        "smid": "-1",
+        "cid": "-1",
+        "sText": "-- All Section --",
+        "ssText": "-- All Sub Section --",
+        "smText": "-- All Sub Section List --",
+        "cText": "-- All Info for --",
+        "doDirect": "1"
+      },
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin": "https://www.sebi.gov.in",
+        "Referer": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes",
+        "X-Requested-With": "XMLHttpRequest"
+      },
+      "response_status": 200
+    },
+    {
+      "page": 3,
+      "method": "POST",
+      "url": "https://www.sebi.gov.in/sebiweb/ajax/home/getnewslistallinfo.jsp",
+      "query_params": {},
+      "form_payload": {
+        "nextValue": "2",
+        "next": "n",
+        "search": "",
+        "fromDate": "",
+        "toDate": "",
+        "deptId": "-1",
+        "sid": "-1",
+        "ssid": "-1",
+        "smid": "-1",
+        "cid": "-1",
+        "sText": "-- All Section --",
+        "ssText": "-- All Sub Section --",
+        "smText": "-- All Sub Section List --",
+        "cText": "-- All Info for --",
+        "doDirect": "-1"
+      },
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin": "https://www.sebi.gov.in",
+        "Referer": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListingAll=yes",
+        "X-Requested-With": "XMLHttpRequest"
+      },
+      "response_status": 200
+    }
+  ],
+  "playwright_used": false
+}
