@@ -1,4 +1,44 @@
 sources:
+  amfi-important-updates:
+    source: amfi-important-updates
+    regulator: AMFI
+    base_url: "https://www.amfiindia.com"
+    listing_url: "https://www.amfiindia.com/important-updates"
+    listing_selector: "h5.title"
+    link_selector: "a"
+    default_document_type: "important-update"
+    default_category: "important-updates"
+    default_department: ""
+  amfi-mfd-circulars:
+    source: amfi-mfd-circulars
+    regulator: AMFI
+    base_url: "https://www.amfiindia.com"
+    listing_url: "https://www.amfiindia.com/distributor/amfi-circulars"
+    listing_selector: "div.css-1f8ksoa"
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "mfd-circulars"
+    default_department: ""
+  nism-circulars:
+    source: nism-circulars
+    regulator: NISM
+    base_url: "https://www.nism.ac.in"
+    listing_url: "https://www.nism.ac.in/circulars/"
+    listing_selector: "div.circulars-page li.item"
+    link_selector: "div.title a"
+    default_document_type: "circular"
+    default_category: "circulars"
+    default_department: ""
+  nsekra-circulars:
+    source: nsekra-circulars
+    regulator: NSE KRA
+    base_url: "https://www.nsekra.com"
+    listing_url: "https://www.nsekra.com/circulars"
+    listing_selector: "table tbody tr"
+    link_selector: "a"
+    default_document_type: "circular"
+    default_category: "circulars"
+    default_department: ""
   apmi-documents:
     source: apmi-documents
     regulator: APMI
@@ -273,7 +313,7 @@ sources:
     source: rbi-notifications
     regulator: RBI
     base_url: "https://www.rbi.org.in"
-    listing_url: ""
+    listing_url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "notification"
@@ -283,7 +323,7 @@ sources:
     source: rbi-press-releases
     regulator: RBI
     base_url: "https://www.rbi.org.in"
-    listing_url: ""
+    listing_url: "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "press-release"
@@ -293,7 +333,7 @@ sources:
     source: rbi-master-directions
     regulator: RBI
     base_url: "https://www.rbi.org.in"
-    listing_url: ""
+    listing_url: "https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "master-direction"
@@ -303,9 +343,109 @@ sources:
     source: rbi-master-circulars
     regulator: RBI
     base_url: "https://www.rbi.org.in"
-    listing_url: ""
+    listing_url: "https://www.rbi.org.in/Scripts/BS_ViewMasterCirculardetails.aspx"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "master-circular"
     default_category: "master-circulars"
+    default_department: ""
+  rbi-circular-index:
+    source: rbi-circular-index
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/scripts/bs_circularindexdisplay.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "circular-index"
+    default_category: "circular-index"
+    default_department: ""
+  rbi-standalone-circulars:
+    source: rbi-standalone-circulars
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/BS_ViewListofstandalonecirculars.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "standalone-circular"
+    default_category: "standalone-circulars"
+    default_department: ""
+  rbi-withdrawn-circulars:
+    source: rbi-withdrawn-circulars
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/NotificationUserWithdrawnCircular.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "withdrawn-circular"
+    default_category: "withdrawn-circulars"
+    default_department: ""
+  rbi-amendment-directions:
+    source: rbi-amendment-directions
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "amendment-direction"
+    default_category: "amendment-directions"
+    default_department: ""
+  rbi-acts:
+    source: rbi-acts
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/Act.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "legal-act"
+    default_category: "acts"
+    default_department: ""
+  rbi-rules:
+    source: rbi-rules
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/Rules.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "legal-rule"
+    default_category: "rules"
+    default_department: ""
+  rbi-regulations:
+    source: rbi-regulations
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/Regulations.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "legal-regulation"
+    default_category: "regulations"
+    default_department: ""
+  rbi-schemes:
+    source: rbi-schemes
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/Schemes.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "scheme"
+    default_category: "schemes"
+    default_department: ""
+  rbi-draft-notifications-guidelines:
+    source: rbi-draft-notifications-guidelines
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/DraftNotificationsGuildelines.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "draft-notification-guideline"
+    default_category: "draft-notifications-guidelines"
+    default_department: ""
+  rbi-draft-directions-re-wise:
+    source: rbi-draft-directions-re-wise
+    regulator: RBI
+    base_url: "https://www.rbi.org.in"
+    listing_url: "https://www.rbi.org.in/Scripts/BS_ViewREwiseDraftDirections.aspx"
+    listing_selector: ""
+    link_selector: "a"
+    default_document_type: "draft-direction-re-wise"
+    default_category: "draft-directions-re-wise"
     default_department: ""

@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import csv
+import json
+import shutil
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Iterable
 
@@ -10,6 +13,7 @@ import yaml
 from loguru import logger
 
 from scrapers.bse import BSEScraper
+from scrapers.amfi import AMFIImportantUpdatesScraper, AMFIMFDCircularsScraper
 from scrapers.apmi import (
     APMIComplianceSutraScraper,
     APMICircularsScraper,
@@ -23,6 +27,8 @@ from scrapers.incometax import IncomeTaxCircularsScraper, IncomeTaxNotifications
 from scrapers.irdai import IRDAIScraper
 from scrapers.mcx import MCXScraper
 from scrapers.ncdex import NCDEXScraper
+from scrapers.nism import NISMScraper
+from scrapers.nsekra import NSEKRAScraper
 from scrapers.nse import NSEScraper
 from scrapers.nse_press_releases import NSEPressReleasesScraper
 from scrapers.nerl import NERLScraper
@@ -39,15 +45,29 @@ from scrapers.pfrda import (
     PFRDATendersScraper,
 )
 from scrapers.rbi import (
+    RBIActsScraper,
+    RBIAmendmentDirectionsScraper,
+    RBICircularIndexScraper,
+    RBIDraftDirectionsREWiseScraper,
+    RBIDraftNotificationsGuidelinesScraper,
     RBIMasterCircularsScraper,
     RBIMasterDirectionsScraper,
     RBINotificationsScraper,
     RBIPressReleasesScraper,
+    RBIRegulationsScraper,
+    RBIRulesScraper,
+    RBISchemesScraper,
+    RBIStandaloneCircularsScraper,
+    RBIWithdrawnCircularsScraper,
 )
 from scrapers.sebi import SEBI_LISTING_TYPES, SEBIScraper
 
 
 SCRAPER_MAP = {
+    "amfi-important-updates": AMFIImportantUpdatesScraper,
+    "amfi-mfd-circulars": AMFIMFDCircularsScraper,
+    "nism-circulars": NISMScraper,
+    "nsekra-circulars": NSEKRAScraper,
     "apmi-documents": APMIDocumentsScraper,
     "apmi-circulars": APMICircularsScraper,
     "apmi-sebi-resources": APMISEBIResourcesScraper,
@@ -79,7 +99,34 @@ SCRAPER_MAP = {
     "rbi-press-releases": RBIPressReleasesScraper,
     "rbi-master-directions": RBIMasterDirectionsScraper,
     "rbi-master-circulars": RBIMasterCircularsScraper,
+    "rbi-circular-index": RBICircularIndexScraper,
+    "rbi-standalone-circulars": RBIStandaloneCircularsScraper,
+    "rbi-withdrawn-circulars": RBIWithdrawnCircularsScraper,
+    "rbi-amendment-directions": RBIAmendmentDirectionsScraper,
+    "rbi-acts": RBIActsScraper,
+    "rbi-rules": RBIRulesScraper,
+    "rbi-regulations": RBIRegulationsScraper,
+    "rbi-schemes": RBISchemesScraper,
+    "rbi-draft-notifications-guidelines": RBIDraftNotificationsGuidelinesScraper,
+    "rbi-draft-directions-re-wise": RBIDraftDirectionsREWiseScraper,
 }
+
+RBI_REBUILD_SOURCE_IDS = [
+    "rbi-notifications",
+    "rbi-press-releases",
+    "rbi-master-directions",
+    "rbi-master-circulars",
+    "rbi-circular-index",
+    "rbi-standalone-circulars",
+    "rbi-withdrawn-circulars",
+    "rbi-amendment-directions",
+    "rbi-acts",
+    "rbi-rules",
+    "rbi-regulations",
+    "rbi-schemes",
+    "rbi-draft-notifications-guidelines",
+    "rbi-draft-directions-re-wise",
+]
 
 
 def configure_logging() -> None:
@@ -111,6 +158,229 @@ def iter_selected_sources(source_arg: str, configs: dict) -> Iterable[tuple[str,
     if source_arg not in configs:
         raise KeyError(f"Unknown source: {source_arg}")
     yield source_arg, configs[source_arg]
+
+
+def archive_existing_rbi_outputs(data_dir: Path) -> Path:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    archive_dir = data_dir / "archive" / f"rbi_rebuild_{timestamp}"
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    for path in sorted(data_dir.glob("rbi_*")):
+        if path.name == "rbi_documents_all.csv":
+            shutil.move(str(path), str(archive_dir / path.name))
+            continue
+        if path.suffix.lower() in {".csv", ".json"}:
+            shutil.move(str(path), str(archive_dir / path.name))
+            continue
+        if path.name.endswith(".meta.json"):
+            shutil.move(str(path), str(archive_dir / path.name))
+    return archive_dir
+
+
+def unified_rbi_headers() -> list[str]:
+    return [
+        "source_id",
+        "document_class",
+        "title_or_subject",
+        "circular_number",
+        "serial_number",
+        "date",
+        "department",
+        "meant_for",
+        "withdrawal_category",
+        "regulated_entity",
+        "archive_year",
+        "archive_month",
+        "detail_url",
+        "canonical_url",
+        "source_url",
+        "occurrence_count",
+        "occurrence_history",
+        "scraped_at",
+    ]
+
+
+def load_csv_rows(file_path: Path) -> list[dict[str, str]]:
+    with open(file_path, "r", newline="", encoding="utf-8") as file_obj:
+        return list(csv.DictReader(file_obj))
+
+
+def build_rbi_unified_export(data_dir: Path) -> tuple[Path, dict[str, dict[str, object]]]:
+    output_path = data_dir / "rbi_documents_all.csv"
+    md_occurrence_path = data_dir / "rbi_master_directions_occurrences.csv"
+    occurrence_map: dict[str, list[dict[str, str]]] = {}
+    if md_occurrence_path.exists():
+        for row in load_csv_rows(md_occurrence_path):
+            canonical = (row.get("canonical_url") or "").strip().lower()
+            if not canonical:
+                continue
+            occurrence_map.setdefault(canonical, []).append(row)
+
+    source_files = {source_id: data_dir / f"{source_id.replace('-', '_')}_archive.csv" for source_id in RBI_REBUILD_SOURCE_IDS}
+    rows: list[dict[str, str]] = []
+    source_audit: dict[str, dict[str, object]] = {}
+    seen_keys: set[tuple[str, ...]] = set()
+
+    for source_id, file_path in source_files.items():
+        if not file_path.exists():
+            raise RuntimeError(f"Missing RBI source export for unified build: {file_path}")
+        source_rows = load_csv_rows(file_path)
+        year_counts: dict[str, int] = {}
+        dates: list[str] = []
+        missing_dates = 0
+        duplicate_keys = 0
+        non_rbi_urls = 0
+        for row in source_rows:
+            date_value = (row.get("date") or "").strip()
+            if date_value:
+                year_counts[date_value[:4]] = year_counts.get(date_value[:4], 0) + 1
+                dates.append(date_value)
+            else:
+                missing_dates += 1
+            url_candidate = (row.get("canonical_url") or row.get("detail_url") or row.get("link") or "").lower()
+            if url_candidate and "rbi.org.in" not in url_candidate and "rbidocs.rbi.org.in" not in url_candidate:
+                non_rbi_urls += 1
+
+            canonical_url = (row.get("canonical_url") or row.get("detail_url") or row.get("link") or "").strip()
+            occurrence_rows = occurrence_map.get(canonical_url.lower(), [])
+            if occurrence_rows:
+                history_payload = json.dumps(occurrence_rows, ensure_ascii=False)
+                archive_year = ",".join(sorted({item.get("archive_year", "") for item in occurrence_rows if item.get("archive_year")}))
+                archive_month = ",".join(sorted({item.get("archive_month", "") for item in occurrence_rows if item.get("archive_month")}))
+            else:
+                history_payload = ""
+                archive_year = (row.get("archive_year") or "").strip()
+                archive_month = (row.get("archive_month") or "").strip()
+
+            unified_row = {
+                "source_id": source_id,
+                "document_class": source_id.replace("rbi-", "").replace("-", " "),
+                "title_or_subject": (row.get("subject") or row.get("title") or row.get("title_or_subject") or "").strip(),
+                "circular_number": (row.get("circular_no") or row.get("circular_number") or "").strip(),
+                "serial_number": (row.get("serial_number") or "").strip(),
+                "date": date_value,
+                "department": (row.get("department") or "").strip(),
+                "meant_for": (row.get("meant_for") or "").strip(),
+                "withdrawal_category": (row.get("withdrawal_category") or "").strip(),
+                "regulated_entity": (row.get("regulated_entity") or "").strip(),
+                "archive_year": archive_year,
+                "archive_month": archive_month,
+                "detail_url": (row.get("detail_url") or row.get("link") or "").strip(),
+                "canonical_url": canonical_url,
+                "source_url": (row.get("source_url") or "").strip(),
+                "occurrence_count": str(len(occurrence_rows) if occurrence_rows else 1),
+                "occurrence_history": history_payload,
+                "scraped_at": (row.get("scraped_at") or "").strip(),
+            }
+            dedupe_key = (
+                source_id,
+                (unified_row["canonical_url"] or unified_row["detail_url"] or unified_row["title_or_subject"]).lower(),
+                unified_row["archive_year"].lower(),
+                unified_row["archive_month"].lower(),
+                unified_row["withdrawal_category"].lower(),
+                unified_row["regulated_entity"].lower(),
+            )
+            if dedupe_key in seen_keys:
+                duplicate_keys += 1
+                continue
+            seen_keys.add(dedupe_key)
+            rows.append(unified_row)
+
+        source_audit[source_id] = {
+            "row_count": len(source_rows),
+            "year_counts": {key: year_counts[key] for key in sorted(year_counts)},
+            "min_date": min(dates) if dates else None,
+            "max_date": max(dates) if dates else None,
+            "missing_dates": missing_dates,
+            "duplicate_keys_skipped": duplicate_keys,
+            "non_rbi_urls": non_rbi_urls,
+        }
+
+    with open(output_path, "w", newline="", encoding="utf-8") as file_obj:
+        writer = csv.DictWriter(file_obj, fieldnames=unified_rbi_headers())
+        writer.writeheader()
+        writer.writerows(rows)
+    return output_path, source_audit
+
+
+def validate_rbi_unified_export(file_path: Path) -> dict[str, object]:
+    rows = load_csv_rows(file_path)
+    headers_ok = list(rows[0].keys()) == unified_rbi_headers() if rows else False
+    duplicate_count = 0
+    missing_dates = 0
+    non_rbi_urls = 0
+    year_counts: dict[str, int] = {}
+    dates: list[str] = []
+    seen_keys: set[tuple[str, ...]] = set()
+    for row in rows:
+        date_value = (row.get("date") or "").strip()
+        if date_value:
+            dates.append(date_value)
+            year_counts[date_value[:4]] = year_counts.get(date_value[:4], 0) + 1
+        else:
+            missing_dates += 1
+        url_candidate = (row.get("canonical_url") or row.get("detail_url") or "").lower()
+        if url_candidate and "rbi.org.in" not in url_candidate and "rbidocs.rbi.org.in" not in url_candidate:
+            non_rbi_urls += 1
+        dedupe_key = (
+            (row.get("source_id") or "").lower(),
+            (row.get("canonical_url") or row.get("detail_url") or row.get("title_or_subject") or "").lower(),
+            (row.get("archive_year") or "").lower(),
+            (row.get("archive_month") or "").lower(),
+            (row.get("withdrawal_category") or "").lower(),
+            (row.get("regulated_entity") or "").lower(),
+        )
+        if dedupe_key in seen_keys:
+            duplicate_count += 1
+        else:
+            seen_keys.add(dedupe_key)
+    report = {
+        "file": str(file_path),
+        "headers_ok": headers_ok,
+        "total_rows": len(rows),
+        "rows_per_year": {key: year_counts[key] for key in sorted(year_counts)},
+        "min_date": min(dates) if dates else None,
+        "max_date": max(dates) if dates else None,
+        "missing_dates": missing_dates,
+        "duplicate_keys": duplicate_count,
+        "non_rbi_urls": non_rbi_urls,
+        "quality_gate_passed": headers_ok and duplicate_count == 0,
+    }
+    report_path = file_path.with_name("rbi_documents_all_validation_report.json")
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    if not report["quality_gate_passed"]:
+        raise RuntimeError("Unified RBI export failed validation")
+    return report
+
+
+def run_rebuild_rbi_official(use_playwright_fallback: bool) -> int:
+    configs = load_source_configs()
+    data_dir = Path("data")
+    archive_dir = archive_existing_rbi_outputs(data_dir)
+    print(f"Archived previous RBI outputs to: {archive_dir}")
+    for source_id in RBI_REBUILD_SOURCE_IDS:
+        config = configs[source_id]
+        scraper_class = SCRAPER_MAP[source_id]
+        out_path = data_dir / f"{source_id.replace('-', '_')}_archive.csv"
+        checkpoint_path = data_dir / f"{source_id.replace('-', '_')}_checkpoint.json"
+        listing_url = config["listing_url"]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            scraper.scrape_listing_url(
+                url=listing_url,
+                out_path=out_path,
+                resume=False,
+                checkpoint_path=checkpoint_path,
+                max_chunks_this_run=None,
+                delay_seconds=1.5,
+                retries=5,
+                retry_base_delay=3.0,
+                retry_max_delay=60.0,
+                all_available=True,
+            )
+            scraper.validate_export(out_path)
+    unified_path, source_audit = build_rbi_unified_export(data_dir)
+    unified_report = validate_rbi_unified_export(unified_path)
+    print(json.dumps({"source_audit": source_audit, "unified_report": unified_report}, ensure_ascii=False, indent=2))
+    return 0
 
 
 def run_backfill(
@@ -517,12 +787,88 @@ PFRDA_SCRAPER_CLASS_MAP = {
     "pfrda-tenders": PFRDATendersScraper,
 }
 
+AMFI_SCRAPER_CLASS_MAP = {
+    "amfi-important-updates": AMFIImportantUpdatesScraper,
+    "amfi-mfd-circulars": AMFIMFDCircularsScraper,
+}
+
+NISM_SCRAPER_CLASS_MAP = {
+    "nism-circulars": NISMScraper,
+}
+
+NSEKRA_SCRAPER_CLASS_MAP = {
+    "nsekra-circulars": NSEKRAScraper,
+}
+
 APMI_SCRAPER_CLASS_MAP = {
     "apmi-documents": APMIDocumentsScraper,
     "apmi-circulars": APMICircularsScraper,
     "apmi-sebi-resources": APMISEBIResourcesScraper,
     "apmi-compliance-sutra": APMIComplianceSutraScraper,
 }
+
+
+def run_scout_amfi(url: str, use_playwright_fallback: bool) -> int:
+    del url
+    configs = load_source_configs()
+    config = configs["amfi-important-updates"]
+    with AMFIImportantUpdatesScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        scraper.scout_site("https://www.amfiindia.com/important-updates")
+    return 0
+
+
+def run_inspect_amfi(source_arg: str, url: str, use_playwright_fallback: bool, method_name: str) -> int:
+    configs = load_source_configs()
+    scraper_class = AMFI_SCRAPER_CLASS_MAP[source_arg]
+    config = configs[source_arg]
+    with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        getattr(scraper, method_name)(url)
+    return 0
+
+
+def run_discover_amfi(source_arg: str, url: str, use_playwright_fallback: bool, method_name: str) -> int:
+    configs = load_source_configs()
+    scraper_class = AMFI_SCRAPER_CLASS_MAP[source_arg]
+    config = configs[source_arg]
+    with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        getattr(scraper, method_name)(url)
+    return 0
+
+
+def run_inspect_nism(source_arg: str, url: str, use_playwright_fallback: bool, method_name: str) -> int:
+    configs = load_source_configs()
+    scraper_class = NISM_SCRAPER_CLASS_MAP[source_arg]
+    config = configs[source_arg]
+    with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        getattr(scraper, method_name)(url)
+    return 0
+
+
+def run_discover_nism(source_arg: str, url: str, use_playwright_fallback: bool, method_name: str) -> int:
+    configs = load_source_configs()
+    scraper_class = NISM_SCRAPER_CLASS_MAP[source_arg]
+    config = configs[source_arg]
+    with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        getattr(scraper, method_name)(url)
+    return 0
+
+
+def run_inspect_nsekra(source_arg: str, url: str, use_playwright_fallback: bool, method_name: str) -> int:
+    configs = load_source_configs()
+    scraper_class = NSEKRA_SCRAPER_CLASS_MAP[source_arg]
+    config = configs[source_arg]
+    with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        getattr(scraper, method_name)(url)
+    return 0
+
+
+def run_discover_nsekra(source_arg: str, url: str, use_playwright_fallback: bool, method_name: str) -> int:
+    configs = load_source_configs()
+    scraper_class = NSEKRA_SCRAPER_CLASS_MAP[source_arg]
+    config = configs[source_arg]
+    with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+        getattr(scraper, method_name)(url)
+    return 0
 
 
 def run_inspect_apmi(url: str, use_playwright_fallback: bool) -> int:
@@ -778,6 +1124,21 @@ def run_validate_export(source_arg: str, file_path: str, use_playwright_fallback
         with IncomeTaxNotificationsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
             scraper.validate_export(file_path)
         return 0
+    if source_arg in AMFI_SCRAPER_CLASS_MAP:
+        scraper_class = AMFI_SCRAPER_CLASS_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            scraper.validate_export(file_path)
+        return 0
+    if source_arg in NISM_SCRAPER_CLASS_MAP:
+        scraper_class = NISM_SCRAPER_CLASS_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            scraper.validate_export(file_path)
+        return 0
+    if source_arg in NSEKRA_SCRAPER_CLASS_MAP:
+        scraper_class = NSEKRA_SCRAPER_CLASS_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            scraper.validate_export(file_path)
+        return 0
     if source_arg in PFRDA_SCRAPER_CLASS_MAP:
         scraper_class = PFRDA_SCRAPER_CLASS_MAP[source_arg]
         with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
@@ -788,24 +1149,13 @@ def run_validate_export(source_arg: str, file_path: str, use_playwright_fallback
         with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
             scraper.validate_export(file_path)
         return 0
-    if source_arg == "rbi-notifications":
-        with RBINotificationsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
-            scraper.validate_export(file_path)
-        return 0
-    if source_arg == "rbi-press-releases":
-        with RBIPressReleasesScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
-            scraper.validate_export(file_path)
-        return 0
-    if source_arg == "rbi-master-directions":
-        with RBIMasterDirectionsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
-            scraper.validate_export(file_path)
-        return 0
-    if source_arg == "rbi-master-circulars":
-        with RBIMasterCircularsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+    if source_arg in RBI_REBUILD_SOURCE_IDS:
+        scraper_class = SCRAPER_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
             scraper.validate_export(file_path)
         return 0
     raise NotImplementedError(
-        "validate-export is currently implemented only for NSE, NSE press releases, BSE, MCX, NCDEX, NERL, CDSL, CCRL, NSDL, IFSCA, IRDAI Whats New, Income Tax circulars/notifications, PFRDA sources, APMI sources, and RBI sources"
+        "validate-export is currently implemented only for AMFI, NISM, NSE KRA, APMI, NSE, NSE press releases, BSE, MCX, NCDEX, NERL, CDSL, CCRL, NSDL, IFSCA, IRDAI Whats New, Income Tax circulars/notifications, PFRDA sources, and RBI sources"
     )
 
 
@@ -880,6 +1230,7 @@ def run_scrape_url(
     older_unresolved: bool,
     include_type: bool,
     include_department: bool,
+    include_downloads: bool,
 ) -> int:
     configs = load_source_configs()
     config = configs[source_arg]
@@ -1172,6 +1523,62 @@ def run_scrape_url(
                 all_available=all_available,
             )
             transport = scraper.last_fetch_transport
+    elif source_arg in AMFI_SCRAPER_CLASS_MAP:
+        scraper_class = AMFI_SCRAPER_CLASS_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            records = scraper.scrape_listing_url(
+                url=url,
+                out_path=out_path,
+                from_date=from_date,
+                to_date=to_date,
+                include_category=include_type,
+                resume=resume,
+                checkpoint_path=checkpoint,
+                max_chunks_this_run=max_pages_this_run,
+                delay_seconds=delay_seconds,
+                retries=retries,
+                retry_base_delay=retry_base_delay,
+                retry_max_delay=retry_max_delay,
+                all_available=all_available,
+            )
+            transport = scraper.last_fetch_transport
+    elif source_arg in NISM_SCRAPER_CLASS_MAP:
+        scraper_class = NISM_SCRAPER_CLASS_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            records = scraper.scrape_listing_url(
+                url=url,
+                out_path=out_path,
+                from_date=from_date,
+                to_date=to_date,
+                include_downloads=include_downloads,
+                resume=resume,
+                checkpoint_path=checkpoint,
+                max_chunks_this_run=max_pages_this_run,
+                delay_seconds=delay_seconds,
+                retries=retries,
+                retry_base_delay=retry_base_delay,
+                retry_max_delay=retry_max_delay,
+                all_available=all_available,
+            )
+            transport = scraper.last_fetch_transport
+    elif source_arg in NSEKRA_SCRAPER_CLASS_MAP:
+        scraper_class = NSEKRA_SCRAPER_CLASS_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+            records = scraper.scrape_listing_url(
+                url=url,
+                out_path=out_path,
+                from_date=from_date,
+                to_date=to_date,
+                resume=resume,
+                checkpoint_path=checkpoint,
+                max_chunks_this_run=max_pages_this_run,
+                delay_seconds=delay_seconds,
+                retries=retries,
+                retry_base_delay=retry_base_delay,
+                retry_max_delay=retry_max_delay,
+                all_available=all_available,
+            )
+            transport = scraper.last_fetch_transport
     elif source_arg in APMI_SCRAPER_CLASS_MAP:
         scraper_class = APMI_SCRAPER_CLASS_MAP[source_arg]
         with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
@@ -1185,62 +1592,9 @@ def run_scrape_url(
                 delay_seconds=delay_seconds,
             )
             transport = "httpx"
-    elif source_arg == "rbi-notifications":
-        with RBINotificationsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
-            records = scraper.scrape_listing_url(
-                url=url,
-                out_path=out_path,
-                from_date=from_date,
-                to_date=to_date,
-                include_category=include_type,
-                resume=resume,
-                checkpoint_path=checkpoint,
-                max_chunks_this_run=max_pages_this_run,
-                delay_seconds=delay_seconds,
-                retries=retries,
-                retry_base_delay=retry_base_delay,
-                retry_max_delay=retry_max_delay,
-                all_available=all_available,
-            )
-            transport = scraper.last_fetch_transport
-    elif source_arg == "rbi-press-releases":
-        with RBIPressReleasesScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
-            records = scraper.scrape_listing_url(
-                url=url,
-                out_path=out_path,
-                from_date=from_date,
-                to_date=to_date,
-                include_category=include_type,
-                resume=resume,
-                checkpoint_path=checkpoint,
-                max_chunks_this_run=max_pages_this_run,
-                delay_seconds=delay_seconds,
-                retries=retries,
-                retry_base_delay=retry_base_delay,
-                retry_max_delay=retry_max_delay,
-                all_available=all_available,
-            )
-            transport = scraper.last_fetch_transport
-    elif source_arg == "rbi-master-directions":
-        with RBIMasterDirectionsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
-            records = scraper.scrape_listing_url(
-                url=url,
-                out_path=out_path,
-                from_date=from_date,
-                to_date=to_date,
-                include_category=include_type,
-                resume=resume,
-                checkpoint_path=checkpoint,
-                max_chunks_this_run=max_pages_this_run,
-                delay_seconds=delay_seconds,
-                retries=retries,
-                retry_base_delay=retry_base_delay,
-                retry_max_delay=retry_max_delay,
-                all_available=all_available,
-            )
-            transport = scraper.last_fetch_transport
-    elif source_arg == "rbi-master-circulars":
-        with RBIMasterCircularsScraper(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
+    elif source_arg in RBI_REBUILD_SOURCE_IDS:
+        scraper_class = SCRAPER_MAP[source_arg]
+        with scraper_class(config=config, use_playwright_fallback=use_playwright_fallback) as scraper:
             records = scraper.scrape_listing_url(
                 url=url,
                 out_path=out_path,
@@ -1259,7 +1613,7 @@ def run_scrape_url(
             transport = scraper.last_fetch_transport
     else:
         raise NotImplementedError(
-            "scrape-url is currently implemented only for SEBI, NSE, NSE press releases, BSE, MCX, NCDEX, NERL, CDSL, CCRL, NSDL, IFSCA, IRDAI Whats New, Income Tax circulars/notifications, PFRDA sources, and RBI sources"
+            "scrape-url is currently implemented only for SEBI, NSE, NSE press releases, NSE KRA, BSE, MCX, NCDEX, NERL, CDSL, CCRL, NSDL, IFSCA, IRDAI Whats New, Income Tax circulars/notifications, PFRDA sources, and RBI sources"
         )
     print(f"Wrote {len(records)} records to {out_path}")
     print(f"Fetch transport: {transport}")
@@ -1281,6 +1635,8 @@ def build_parser() -> argparse.ArgumentParser:
     incremental = subparsers.add_parser("incremental", help="Run an incremental scrape")
     incremental.add_argument("--source", required=True, choices=["all", *SCRAPER_MAP.keys()])
     incremental.add_argument("--days-back", type=int, default=7)
+
+    subparsers.add_parser("rebuild-rbi-official", help="Archive old RBI outputs, rebuild all official RBI sources, and validate the unified export")
 
     inspect = subparsers.add_parser("inspect", help="Inspect a live source listing and capture fixtures")
     inspect.add_argument("--source", required=True, choices=["sebi"])
@@ -1379,6 +1735,33 @@ def build_parser() -> argparse.ArgumentParser:
 
     inspect_apmi = subparsers.add_parser("inspect-apmi", help="Inspect the APMI welcome/resource page")
     inspect_apmi.add_argument("--url", required=True)
+
+    scout_amfi = subparsers.add_parser("scout-amfi", help="Scout AMFI official routes and discover rendered listing flows")
+    scout_amfi.add_argument("--url", required=True)
+
+    inspect_amfi_important_updates = subparsers.add_parser(
+        "inspect-amfi-important-updates",
+        help="Inspect AMFI Important Updates listing flow",
+    )
+    inspect_amfi_important_updates.add_argument("--url", required=True)
+
+    inspect_amfi_mfd_circulars = subparsers.add_parser(
+        "inspect-amfi-mfd-circulars",
+        help="Inspect AMFI MFD circulars listing flow",
+    )
+    inspect_amfi_mfd_circulars.add_argument("--url", required=True)
+
+    inspect_nsekra_circulars = subparsers.add_parser(
+        "inspect-nsekra-circulars",
+        help="Inspect NSE KRA circular page, JS shell, and discovered public API flow",
+    )
+    inspect_nsekra_circulars.add_argument("--url", required=True)
+
+    inspect_nism_circulars = subparsers.add_parser("inspect-nism-circulars", help="Inspect NISM circular pages and archive entry points")
+    inspect_nism_circulars.add_argument("--url", required=True)
+
+    inspect_nism_circular_archive = subparsers.add_parser("inspect-nism-circular-archive", help="Inspect NISM circular archive flow and pagination")
+    inspect_nism_circular_archive.add_argument("--url", required=True)
 
     scout_pfrda = subparsers.add_parser("scout-pfrda", help="Scout PFRDA official routes and discover portal listing flows")
     scout_pfrda.add_argument("--url", required=True)
@@ -1492,6 +1875,27 @@ def build_parser() -> argparse.ArgumentParser:
     discover_pfrda_press_releases = subparsers.add_parser("discover-pfrda-press-releases-range", help="Discover the oldest available PFRDA press release date")
     discover_pfrda_press_releases.add_argument("--url", required=True)
 
+    discover_amfi_important_updates = subparsers.add_parser(
+        "discover-amfi-important-updates-range",
+        help="Discover available AMFI Important Updates date coverage",
+    )
+    discover_amfi_important_updates.add_argument("--url", required=True)
+
+    discover_amfi_mfd_circulars = subparsers.add_parser(
+        "discover-amfi-mfd-circular-range",
+        help="Discover the oldest available AMFI MFD circular date",
+    )
+    discover_amfi_mfd_circulars.add_argument("--url", required=True)
+
+    discover_nsekra_circulars = subparsers.add_parser(
+        "discover-nsekra-circular-range",
+        help="Discover the oldest available NSE KRA circular date",
+    )
+    discover_nsekra_circulars.add_argument("--url", required=True)
+
+    discover_nism_circulars = subparsers.add_parser("discover-nism-circular-range", help="Discover the oldest available NISM circular date")
+    discover_nism_circulars.add_argument("--url", required=True)
+
     recover_bse = subparsers.add_parser("recover-bse-old-notice-dates", help="Recover exact dates from older unresolved BSE notice detail pages")
     recover_bse.add_argument("--input", required=True)
     recover_bse.add_argument("--out", required=True)
@@ -1512,7 +1916,7 @@ def build_parser() -> argparse.ArgumentParser:
     validate_export.add_argument(
         "--source",
         required=True,
-        choices=["apmi-documents", "apmi-circulars", "apmi-sebi-resources", "apmi-compliance-sutra", "nse", "nse-press-releases", "bse", "mcx", "ncdex", "nerl", "cdsl", "ccrl", "nsdl", "ifsca", "irdai-whats-new", "incometax-circulars", "incometax-notifications", "pfrda-recent-updates", "pfrda-circulars-active", "pfrda-circulars-inoperative", "pfrda-master-circulars-active", "pfrda-notifications", "pfrda-regulations", "pfrda-guidelines", "pfrda-press-releases", "pfrda-tenders", "rbi-notifications", "rbi-press-releases", "rbi-master-directions", "rbi-master-circulars"],
+        choices=["amfi-important-updates", "amfi-mfd-circulars", "nism-circulars", "nsekra-circulars", "apmi-documents", "apmi-circulars", "apmi-sebi-resources", "apmi-compliance-sutra", "nse", "nse-press-releases", "bse", "mcx", "ncdex", "nerl", "cdsl", "ccrl", "nsdl", "ifsca", "irdai-whats-new", "incometax-circulars", "incometax-notifications", "pfrda-recent-updates", "pfrda-circulars-active", "pfrda-circulars-inoperative", "pfrda-master-circulars-active", "pfrda-notifications", "pfrda-regulations", "pfrda-guidelines", "pfrda-press-releases", "pfrda-tenders", "rbi-notifications", "rbi-press-releases", "rbi-master-directions", "rbi-master-circulars", "rbi-circular-index", "rbi-standalone-circulars", "rbi-withdrawn-circulars", "rbi-amendment-directions", "rbi-acts", "rbi-rules", "rbi-regulations", "rbi-schemes", "rbi-draft-notifications-guidelines", "rbi-draft-directions-re-wise"],
     )
     validate_export.add_argument("--file", required=True)
 
@@ -1529,7 +1933,7 @@ def build_parser() -> argparse.ArgumentParser:
     scrape_url.add_argument(
         "--source",
         required=True,
-        choices=["apmi-documents", "apmi-circulars", "apmi-sebi-resources", "apmi-compliance-sutra", "sebi", "nse", "nse-press-releases", "bse", "mcx", "ncdex", "nerl", "cdsl", "ccrl", "nsdl", "ifsca", "irdai-whats-new", "incometax-circulars", "incometax-notifications", "pfrda-recent-updates", "pfrda-circulars-active", "pfrda-circulars-inoperative", "pfrda-master-circulars-active", "pfrda-notifications", "pfrda-regulations", "pfrda-guidelines", "pfrda-press-releases", "pfrda-tenders", "rbi-notifications", "rbi-press-releases", "rbi-master-directions", "rbi-master-circulars"],
+        choices=["amfi-important-updates", "amfi-mfd-circulars", "nism-circulars", "nsekra-circulars", "apmi-documents", "apmi-circulars", "apmi-sebi-resources", "apmi-compliance-sutra", "sebi", "nse", "nse-press-releases", "bse", "mcx", "ncdex", "nerl", "cdsl", "ccrl", "nsdl", "ifsca", "irdai-whats-new", "incometax-circulars", "incometax-notifications", "pfrda-recent-updates", "pfrda-circulars-active", "pfrda-circulars-inoperative", "pfrda-master-circulars-active", "pfrda-notifications", "pfrda-regulations", "pfrda-guidelines", "pfrda-press-releases", "pfrda-tenders", "rbi-notifications", "rbi-press-releases", "rbi-master-directions", "rbi-master-circulars", "rbi-circular-index", "rbi-standalone-circulars", "rbi-withdrawn-circulars", "rbi-amendment-directions", "rbi-acts", "rbi-rules", "rbi-regulations", "rbi-schemes", "rbi-draft-notifications-guidelines", "rbi-draft-directions-re-wise"],
     )
     scrape_url.add_argument("--url", required=True)
     scrape_url.add_argument("--out", required=True)
@@ -1560,6 +1964,7 @@ def build_parser() -> argparse.ArgumentParser:
     scrape_url.add_argument("--include-type", action="store_true")
     scrape_url.add_argument("--include-category", action="store_true")
     scrape_url.add_argument("--include-department", action="store_true")
+    scrape_url.add_argument("--include-downloads", action="store_true")
 
     return parser
 
@@ -1573,6 +1978,8 @@ def main() -> int:
         return run_backfill(args.source, args.from_date, args.to_date, args.use_playwright_fallback, limit=args.limit)
     if args.command == "incremental":
         return run_incremental(args.source, args.days_back, args.use_playwright_fallback)
+    if args.command == "rebuild-rbi-official":
+        return run_rebuild_rbi_official(args.use_playwright_fallback)
     if args.command == "inspect":
         return run_inspect(args.source, args.listing_type, args.use_playwright_fallback)
     if args.command == "inspect-url":
@@ -1631,6 +2038,18 @@ def main() -> int:
         return run_inspect_rbi_faqs(args.url, args.use_playwright_fallback)
     if args.command == "inspect-apmi":
         return run_inspect_apmi(args.url, args.use_playwright_fallback)
+    if args.command == "scout-amfi":
+        return run_scout_amfi(args.url, args.use_playwright_fallback)
+    if args.command == "inspect-amfi-important-updates":
+        return run_inspect_amfi("amfi-important-updates", args.url, args.use_playwright_fallback, "inspect_important_updates")
+    if args.command == "inspect-amfi-mfd-circulars":
+        return run_inspect_amfi("amfi-mfd-circulars", args.url, args.use_playwright_fallback, "inspect_mfd_circulars")
+    if args.command == "inspect-nsekra-circulars":
+        return run_inspect_nsekra("nsekra-circulars", args.url, args.use_playwright_fallback, "inspect_circulars")
+    if args.command == "inspect-nism-circulars":
+        return run_inspect_nism("nism-circulars", args.url, args.use_playwright_fallback, "inspect_circulars")
+    if args.command == "inspect-nism-circular-archive":
+        return run_inspect_nism("nism-circulars", args.url, args.use_playwright_fallback, "inspect_circular_archive")
     if args.command == "scout-pfrda":
         return run_scout_pfrda(args.url, args.use_playwright_fallback)
     if args.command == "inspect-pfrda-recent-updates":
@@ -1699,6 +2118,14 @@ def main() -> int:
         return run_discover_pfrda("pfrda-guidelines", args.url, args.use_playwright_fallback, "discover_guidelines_range")
     if args.command == "discover-pfrda-press-releases-range":
         return run_discover_pfrda("pfrda-press-releases", args.url, args.use_playwright_fallback, "discover_press_releases_range")
+    if args.command == "discover-amfi-important-updates-range":
+        return run_discover_amfi("amfi-important-updates", args.url, args.use_playwright_fallback, "discover_important_updates_range")
+    if args.command == "discover-amfi-mfd-circular-range":
+        return run_discover_amfi("amfi-mfd-circulars", args.url, args.use_playwright_fallback, "discover_mfd_circular_range")
+    if args.command == "discover-nsekra-circular-range":
+        return run_discover_nsekra("nsekra-circulars", args.url, args.use_playwright_fallback, "discover_circular_range")
+    if args.command == "discover-nism-circular-range":
+        return run_discover_nism("nism-circulars", args.url, args.use_playwright_fallback, "discover_circular_range")
     if args.command == "recover-bse-old-notice-dates":
         return run_recover_bse_old_notice_dates(
             args.input,
@@ -1757,6 +2184,7 @@ def main() -> int:
             older_unresolved=args.older_unresolved,
             include_type=(args.include_type or args.include_department or args.include_category),
             include_department=args.include_department,
+            include_downloads=args.include_downloads,
         )
 
     parser.error(f"Unsupported command: {args.command}")

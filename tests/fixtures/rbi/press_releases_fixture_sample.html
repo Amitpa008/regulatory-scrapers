@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head><title>Reserve Bank of India</title></head>
+<head><title>Press Releases - Reserve Bank of India</title></head>
 <body>
-  <span id="lblData">
-    <tr class="tablehead"><td class="textHead" colspan="8">May 14, 2026</td></tr>
-    <tr class="tablecontent1">
-      <td width="8"></td>
-      <td class="textIndexTitle"><a class="Indexlink" href="PressReleases.aspx?Id=3906">RBI imposes monetary penalty on Shree Kadi Nagarik Sahakari Bank Ltd., Dist. Mehsana, Gujarat</a></td>
-      <td class="textKB"><a href="https://www.rbi.org.in/commonman/Upload/English/PressRelease/PDFs/PR259ENG14052026.pdf" target="_blank"><img src="../Images/pdf.gif" /></a></td>
-    </tr>
-    <tr class="tablehead"><td class="textHead" colspan="8">November 13, 2001</td></tr>
-    <tr class="tablecontent2">
-      <td width="8"></td>
-      <td class="textIndexTitle"><a class="Indexlink" href="PressReleases.aspx?Id=10">Legacy RBI press release title</a></td>
-      <td class="textKB"><a href="https://www.rbi.org.in/commonman/Upload/English/PressRelease/PDFs/LEGACY.pdf" target="_blank"><img src="../Images/pdf.gif" /></a></td>
-    </tr>
-  </span>
+  <form id="form1" action="./BS_PressReleaseDisplay.aspx" method="post">
+    <input type="hidden" name="__VIEWSTATE" value="abc" />
+    <input type="hidden" name="__VIEWSTATEGENERATOR" value="def" />
+    <input type="hidden" name="__EVENTVALIDATION" value="ghi" />
+    <input type="hidden" name="hdnYear" value="" />
+    <input type="hidden" name="hdnMonth" value="0" />
+    <input type="submit" id="btn" name="UsrFontCntr$btn" value="" />
+    <div class="archives">
+      <a href="#" onclick='GetYearMonth("2026","5")'>May</a>
+      <a href="#" onclick='GetYearMonth("2025","12")'>December</a>
+      <a href="#" onclick='GetYearMonth("2020","1")'>January</a>
+    </div>
+    <table class="tablebg" width="100%">
+      <tr><td align="left" class="tableheader" colspan="4"><b>May 14, 2026</b></td></tr>
+      <tr>
+        <td><a class="link2" href="BS_PressReleaseDisplay.aspx?prid=3906">RBI imposes monetary penalty on Shree Kadi Nagarik Sahakari Bank Ltd., Dist. Mehsana, Gujarat</a></td>
+        <td colspan="3" nowrap=""><a href="https://rbidocs.rbi.org.in/rdocs/PressRelease/PDFs/PR3906.PDF"><img src="../Images/pdf.gif" /></a></td>
+      </tr>
+      <tr><td align="left" class="tableheader" colspan="4"><b>January 03, 2020</b></td></tr>
+      <tr>
+        <td><a class="link2" href="BS_PressReleaseDisplay.aspx?prid=2001">Legacy official press release title</a></td>
+        <td colspan="3" nowrap=""><a href="https://rbidocs.rbi.org.in/rdocs/PressRelease/PDFs/PR2001.PDF"><img src="../Images/pdf.gif" /></a></td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>
