@@ -613,3 +613,105 @@ def test_validate_draft_rewise_expected_recent_years_fail(tmp_path: Path) -> Non
         writer.writerows(rows)
     with pytest.raises(RuntimeError, match="missing rows for expected recent year"):
         scraper.validate_export(out_path)
+
+
+def test_validate_export_handles_large_csv_field(tmp_path: Path) -> None:
+    scraper = make_md_scraper()
+    out_path = tmp_path / "rbi_master_directions_archive.csv"
+    huge_subject = "Master Direction " + ("X" * 140000)
+    rows = [
+        {
+            "date": "2026-04-30",
+            "subject": huge_subject,
+            "circular_no": "",
+            "link": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13443",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx",
+            "scraped_at": "2026-05-30T00:00:00+00:00",
+        }
+    ]
+    with open(out_path, "w", newline="", encoding="utf-8") as file_obj:
+        writer = csv.DictWriter(file_obj, fieldnames=["date", "subject", "circular_no", "link", "source_url", "scraped_at"])
+        writer.writeheader()
+        writer.writerows(rows)
+    meta_path = Path(f"{out_path}.meta.json")
+    meta_path.write_text(
+        json.dumps(
+            [
+                {
+                    "date": "2026-04-30",
+                    "subject": huge_subject,
+                    "circular_no": "",
+                    "link": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13443",
+                    "source_url": "https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx",
+                    "scraped_at": "2026-05-30T00:00:00+00:00",
+                    "category": "Master Direction",
+                    "raw_date": "2026-04-30",
+                    "raw_title": huge_subject,
+                    "detail_url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13443",
+                    "pdf_url": "",
+                }
+            ],
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    report = scraper.validate_export(out_path)
+    assert report["headers_ok"] is True
+    assert report["total_rows"] == 1
+
+
+def test_load_json_sequence_handles_empty_sidecar() -> None:
+    scraper = make_md_scraper()
+    assert scraper.load_json_sequence("") == []
+    assert scraper.load_json_sequence("   \n\t  ") == []
+
+
+def test_load_json_sequence_handles_normal_json_array_sidecar() -> None:
+    scraper = make_md_scraper()
+    payload = '[{"subject":"A"},{"subject":"B"}]'
+    rows = scraper.load_json_sequence(payload)
+    assert len(rows) == 2
+    assert rows[0]["subject"] == "A"
+
+
+def test_load_json_sequence_handles_concatenated_json_objects() -> None:
+    scraper = make_md_scraper()
+    payload = '{"subject":"A"}{"subject":"B"}'
+    rows = scraper.load_json_sequence(payload)
+    assert len(rows) == 2
+    assert [row["subject"] for row in rows] == ["A", "B"]
+
+
+def test_load_json_sequence_salvages_truncated_sidecar_and_backs_it_up(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    scraper = make_md_scraper()
+    monkeypatch.chdir(tmp_path)
+    sidecar_path = tmp_path / "rbi_master_directions_archive.csv.meta.json"
+    payload = '{"subject":"A"}{"subject":"B"'
+    rows = scraper.load_json_sequence(payload, sidecar_path=sidecar_path)
+    assert len(rows) == 1
+    backups = list((tmp_path / "data" / "archive" / "corrupt_sidecars").glob("*.corrupt"))
+    assert len(backups) == 1
+    assert backups[0].read_text(encoding="utf-8") == payload
+
+
+def test_load_json_sequence_salvages_garbage_in_middle(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    scraper = make_md_scraper()
+    monkeypatch.chdir(tmp_path)
+    sidecar_path = tmp_path / "rbi_master_directions_archive.csv.meta.json"
+    payload = '{"subject":"A"}THIS_IS_GARBAGE{"subject":"B"}'
+    rows = scraper.load_json_sequence(payload, sidecar_path=sidecar_path)
+    assert len(rows) == 1
+    assert rows[0]["subject"] == "A"
+    backups = list((tmp_path / "data" / "archive" / "corrupt_sidecars").glob("*.corrupt"))
+    assert backups
+
+
+def test_write_json_atomic_replaces_final_file(tmp_path: Path) -> None:
+    scraper = make_md_scraper()
+    sidecar_path = tmp_path / "sample.meta.json"
+    payload = [{"subject": "Atomic"}]
+    scraper.write_json_atomic(sidecar_path, payload)
+    assert sidecar_path.exists()
+    assert json.loads(sidecar_path.read_text(encoding="utf-8")) == payload
+    assert not sidecar_path.with_name(f"{sidecar_path.name}.tmp").exists()

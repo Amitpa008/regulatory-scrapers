@@ -60,6 +60,7 @@ from scrapers.rbi import (
     RBIStandaloneCircularsScraper,
     RBIWithdrawnCircularsScraper,
 )
+from scrapers.base import raise_csv_field_size_limit
 from scrapers.sebi import SEBI_LISTING_TYPES, SEBIScraper
 
 
@@ -200,6 +201,7 @@ def unified_rbi_headers() -> list[str]:
 
 
 def load_csv_rows(file_path: Path) -> list[dict[str, str]]:
+    raise_csv_field_size_limit()
     with open(file_path, "r", newline="", encoding="utf-8") as file_obj:
         return list(csv.DictReader(file_obj))
 
@@ -370,7 +372,7 @@ def run_rebuild_rbi_official(use_playwright_fallback: bool) -> int:
                 resume=False,
                 checkpoint_path=checkpoint_path,
                 max_chunks_this_run=None,
-                delay_seconds=1.5,
+                delay_seconds=0.1,
                 retries=5,
                 retry_base_delay=3.0,
                 retry_max_delay=60.0,

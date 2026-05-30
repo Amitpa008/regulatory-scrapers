@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 import math
+import os
 import re
 import time
 from dataclasses import asdict, dataclass
@@ -15,7 +16,7 @@ from bs4 import BeautifulSoup
 
 from extraction.metadata_cleaner import normalize_text, parse_indian_date
 from models import RegulatoryDocument
-from scrapers.base import BaseScraper
+from scrapers.base import BaseScraper, raise_csv_field_size_limit
 
 
 RBI_BASE_URL = "https://www.rbi.org.in"
@@ -709,6 +710,7 @@ class RBIScraper(BaseScraper):
         metadata_rows = self.load_metadata_sidecar(file_path)
         category_counts = self.count_by_category(metadata_rows)
 
+        raise_csv_field_size_limit()
         with open(file_path, "r", newline="", encoding="utf-8") as file_obj:
             reader = csv.reader(file_obj)
             try:
@@ -1765,6 +1767,7 @@ class RBIScraper(BaseScraper):
         if not out_path.exists():
             return []
         if out_path.suffix.lower() == ".csv":
+            raise_csv_field_size_limit()
             with open(out_path, "r", newline="", encoding="utf-8") as file_obj:
                 reader = csv.DictReader(file_obj)
                 records: list[RBIRecord] = []
@@ -1869,19 +1872,85 @@ class RBIScraper(BaseScraper):
         sidecar_path = self.metadata_sidecar_path(out_path)
         existing = []
         if sidecar_path.exists():
-            existing = json.loads(sidecar_path.read_text(encoding="utf-8"))
+            raw_text = sidecar_path.read_text(encoding="utf-8").strip()
+            if raw_text:
+                existing = self.load_json_sequence(raw_text, sidecar_path=sidecar_path)
         existing.extend([asdict(item) for item in records])
-        sidecar_path.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+        self.write_json_atomic(sidecar_path, existing)
 
     def write_metadata_sidecar(self, records: list[RBIRecord], out_path: str | Path) -> None:
         sidecar_path = self.metadata_sidecar_path(out_path)
-        sidecar_path.write_text(json.dumps([asdict(item) for item in records], ensure_ascii=False, indent=2), encoding="utf-8")
+        self.write_json_atomic(sidecar_path, [asdict(item) for item in records])
 
     def load_metadata_sidecar(self, out_path: str | Path) -> list[RBIRecord]:
         sidecar_path = self.metadata_sidecar_path(out_path)
         if not sidecar_path.exists():
             return []
-        return [RBIRecord(**item) for item in json.loads(sidecar_path.read_text(encoding="utf-8"))]
+        raw_text = sidecar_path.read_text(encoding="utf-8").strip()
+        if not raw_text:
+            return []
+        return [RBIRecord(**item) for item in self.load_json_sequence(raw_text, sidecar_path=sidecar_path)]
+
+    def load_json_sequence(self, raw_text: str, *, sidecar_path: Path | None = None) -> list[dict[str, Any]]:
+        if not raw_text or not raw_text.strip():
+            return []
+        stripped = raw_text.strip()
+        try:
+            payload = json.loads(stripped)
+        except json.JSONDecodeError:
+            payload = None
+        else:
+            if isinstance(payload, list):
+                return [item for item in payload if isinstance(item, dict)]
+            if isinstance(payload, dict):
+                return [payload]
+            return []
+
+        decoder = json.JSONDecoder()
+        index = 0
+        items: list[dict[str, Any]] = []
+        malformed_detected = False
+        malformed_message = ""
+        while index < len(raw_text):
+            while index < len(raw_text) and raw_text[index].isspace():
+                index += 1
+            if index >= len(raw_text):
+                break
+            try:
+                payload, next_index = decoder.raw_decode(raw_text, index)
+            except json.JSONDecodeError as exc:
+                malformed_detected = True
+                malformed_message = f"{exc.msg} at char {exc.pos}"
+                break
+            if isinstance(payload, list):
+                items.extend(item for item in payload if isinstance(item, dict))
+            elif isinstance(payload, dict):
+                items.append(payload)
+            index = next_index
+        if malformed_detected and sidecar_path is not None:
+            self.backup_corrupt_sidecar(sidecar_path, raw_text)
+            print(
+                "Warning: recovered salvageable RBI sidecar records from malformed JSON "
+                f"{sidecar_path} ({malformed_message})."
+            )
+        return items
+
+    def backup_corrupt_sidecar(self, sidecar_path: Path, raw_text: str) -> Path:
+        backup_dir = Path("data/archive/corrupt_sidecars")
+        backup_dir.mkdir(parents=True, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        backup_path = backup_dir / f"{sidecar_path.name}.{timestamp}.corrupt"
+        backup_path.write_text(raw_text, encoding="utf-8")
+        return backup_path
+
+    def write_json_atomic(self, path: Path, payload: Any) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        temp_path = path.with_name(f"{path.name}.tmp")
+        with open(temp_path, "w", encoding="utf-8") as file_obj:
+            json.dump(payload, file_obj, ensure_ascii=False, indent=2)
+            file_obj.flush()
+            os.fsync(file_obj.fileno())
+        os.replace(temp_path, path)
 
     def occurrence_output_path(self, out_path: str | Path) -> Path:
         out_path = Path(out_path)
@@ -1942,6 +2011,7 @@ class RBIScraper(BaseScraper):
         out_path = Path(out_path)
         if not out_path.exists():
             return set()
+        raise_csv_field_size_limit()
         with open(out_path, "r", newline="", encoding="utf-8") as file_obj:
             reader = csv.DictReader(file_obj)
             keys: set[tuple[str, ...]] = set()
@@ -2049,6 +2119,7 @@ class RBIInventorySourceScraper(RBIScraper):
         if not out_path.exists():
             return []
         if out_path.suffix.lower() == ".csv":
+            raise_csv_field_size_limit()
             with open(out_path, "r", newline="", encoding="utf-8") as file_obj:
                 return list(csv.DictReader(file_obj))
         if out_path.suffix.lower() == ".json":
@@ -2264,6 +2335,7 @@ class RBIInventorySourceScraper(RBIScraper):
         seen_keys: set[tuple[str, ...]] = set()
         total_rows = 0
 
+        raise_csv_field_size_limit()
         with open(file_path, "r", newline="", encoding="utf-8") as file_obj:
             reader = csv.reader(file_obj)
             try:

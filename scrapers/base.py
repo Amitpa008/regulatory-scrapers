@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import csv
 import ssl
+import sys
 import time
 import random
 from abc import ABC, abstractmethod
@@ -26,6 +28,16 @@ DEFAULT_USER_AGENT = (
     "Chrome/124.0.0.0 Safari/537.36"
 )
 RETRYABLE_HTTP_STATUS_CODES = {429, 500, 502, 503, 504}
+
+
+def raise_csv_field_size_limit() -> None:
+    max_size = sys.maxsize
+    while True:
+        try:
+            csv.field_size_limit(max_size)
+            return
+        except OverflowError:
+            max_size = int(max_size / 10)
 
 
 class BaseScraper(ABC):
