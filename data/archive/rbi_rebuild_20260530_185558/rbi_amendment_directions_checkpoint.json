@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx",
+  "output_path": "data\\rbi_amendment_directions_archive.csv",
+  "newest_available_date": "2026-05-25",
+  "oldest_available_date": "2025-12-04",
+  "total_records_detected": 183,
+  "count_by_year": {
+    "2025": 55,
+    "2026": 128
+  },
+  "chunk_strategy": "single_page_listing",
+  "last_completed_chunk": 1,
+  "records_written": 183,
+  "unique_records_written": 183,
+  "started_at": "2026-05-30T11:21:16.105074+00:00",
+  "updated_at": "2026-05-30T11:21:17.199192+00:00",
+  "completed": true,
+  "errors": []
+}

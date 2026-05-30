@@ -483,6 +483,49 @@ def test_parse_amendment_directions_fixture_live_page() -> None:
     assert "NotificationUser.aspx?Id=" in rows[0]["detail_url"]
 
 
+def test_amendment_directions_builds_single_page_chunk_without_archive_controls() -> None:
+    scraper = make_amendment_scraper()
+    chunk_specs = scraper.build_chunk_specs("rbi-amendment-directions")
+    assert chunk_specs == [
+        {
+            "label": "initial",
+            "url": "https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx",
+            "year": None,
+            "month": None,
+        }
+    ]
+
+
+def test_amendment_directions_scrape_listing_url_falls_back_to_initial_page_when_no_archive_chunks(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    scraper = make_amendment_scraper()
+    html = Path("tests/fixtures/rbi/fs_amendmentdirections.html").read_text(encoding="utf-8")
+    monkeypatch.setattr(scraper, "build_chunk_specs", lambda source: [])
+    monkeypatch.setattr(scraper, "fetch_archive_chunk_html", lambda source, chunk_spec: html)
+    out_path = tmp_path / "rbi_amendment_directions_archive.csv"
+    rows = scraper.scrape_listing_url(
+        url="https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx",
+        out_path=out_path,
+        all_available=True,
+        delay_seconds=0,
+    )
+    assert rows
+    assert any(row["title"] for row in rows)
+
+
+def test_amendment_directions_zero_rows_fail_with_source_specific_message(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    scraper = make_amendment_scraper()
+    monkeypatch.setattr(scraper, "build_chunk_specs", lambda source: [])
+    monkeypatch.setattr(scraper, "fetch_archive_chunk_html", lambda source, chunk_spec: "<html><body><h1>No rows</h1></body></html>")
+    out_path = tmp_path / "rbi_amendment_directions_archive.csv"
+    with pytest.raises(RuntimeError, match="rbi-amendment-directions initial page returned zero rows"):
+        scraper.scrape_listing_url(
+            url="https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx",
+            out_path=out_path,
+            all_available=True,
+            delay_seconds=0,
+        )
+
+
 def test_parse_legal_inventory_fixtures() -> None:
     acts_rows = make_acts_scraper().parse_inventory_rows(
         Path("tests/fixtures/rbi/act.html").read_text(encoding="utf-8"),
@@ -589,6 +632,16 @@ def test_validate_amendment_directions_expected_recent_years_pass(tmp_path: Path
         writer.writerows(rows)
     report = scraper.validate_export(out_path)
     assert report["quality_gate_passed"] is True
+
+
+def test_validate_amendment_directions_empty_export_fails_with_source_specific_message(tmp_path: Path) -> None:
+    scraper = make_amendment_scraper()
+    out_path = tmp_path / "rbi_amendment_directions_archive.csv"
+    with open(out_path, "w", newline="", encoding="utf-8") as file_obj:
+        writer = csv.DictWriter(file_obj, fieldnames=scraper.output_headers)
+        writer.writeheader()
+    with pytest.raises(RuntimeError, match="rbi-amendment-directions initial page returned zero rows"):
+        scraper.validate_export(out_path)
 
 
 def test_validate_draft_rewise_expected_recent_years_fail(tmp_path: Path) -> None:

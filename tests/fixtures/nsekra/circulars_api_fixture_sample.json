@@ -1,0 +1,21 @@
+{
+  "data": {
+    "CircularView": [
+      {
+        "createdDate": "2025-06-16",
+        "circularReference": "NSE/KRA/2025/06",
+        "subject": "Registration of clients with KRA",
+        "filePath": "/downloads/circulars/nsekra_2025_06.pdf"
+      },
+      {
+        "createdDate": "2025-04-24",
+        "circularReference": "NSE/KRA/2025/05",
+        "subject": "Clarification on KYC records for Non-Resident Indians",
+        "filePath": "/downloads/circulars/nsekra_2025_05.pdf"
+      },
+      {
+        "TotalRecords": 2
+      }
+    ]
+  }
+}

@@ -1,16 +1,18 @@
-# regulatory-scrapers
+# Regulatory Scrapers
 
-Scraper framework for Indian regulatory circulars and notifications with resilient HTTP fetching, PDF extraction, normalization, and SQLite-based deduplication.
+Python scraper framework for collecting public regulatory metadata from Indian regulator/exchange websites.
 
-## Usage
+## Features
+
+- Source-specific scrapers
+- CSV / JSON export
+- Resume checkpoints
+- Deduplication
+- Validation reports
+- Retry handling
+- Optional Playwright fallback
+
+## Run tests
 
 ```bash
-python main.py backfill --source sebi --from 2015-01-01 --to 2026-05-16
-python main.py incremental --source all --days-back 7
-```
-
-## Notes
-
-- Playwright is optional and intended only for source-specific fallback flows.
-- Website-specific endpoints and selectors are intentionally marked as `TODO` where live inspection is required.
-
+py -3.13 -m pytest

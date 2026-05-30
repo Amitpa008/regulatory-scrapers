@@ -364,6 +364,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/BS_ViewListofstandalonecirculars.aspx"
+    archive_strategy: "flat_inventory"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "standalone-circular"
@@ -374,6 +375,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/NotificationUserWithdrawnCircular.aspx"
+    archive_strategy: "flat_inventory"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "withdrawn-circular"
@@ -384,6 +386,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx"
+    archive_strategy: "single_page_listing"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "amendment-direction"
@@ -394,6 +397,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/Act.aspx"
+    archive_strategy: "legal_inventory"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "legal-act"
@@ -404,6 +408,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/Rules.aspx"
+    archive_strategy: "legal_inventory"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "legal-rule"
@@ -414,6 +419,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/Regulations.aspx"
+    archive_strategy: "legal_inventory"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "legal-regulation"
@@ -424,6 +430,7 @@ sources:
     regulator: RBI
     base_url: "https://www.rbi.org.in"
     listing_url: "https://www.rbi.org.in/Scripts/Schemes.aspx"
+    archive_strategy: "legal_inventory"
     listing_selector: ""
     link_selector: "a"
     default_document_type: "scheme"

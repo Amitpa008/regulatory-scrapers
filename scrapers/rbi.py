@@ -309,6 +309,37 @@ class RBIScraper(BaseScraper):
     def listing_url(self) -> str:
         return RBI_PRIMARY_LISTING_URLS[self.source]
 
+    @property
+    def archive_strategy(self) -> str:
+        return (self.config.get("archive_strategy", "") or "").strip().lower()
+
+    def is_archive_postback_source(self, source: str | None = None) -> bool:
+        target_source = source or self.source
+        configured_strategy = self.archive_strategy if target_source == self.source else ""
+        if configured_strategy:
+            return configured_strategy in {"year_month_postback", "year_postback", "archive_postback"}
+        return target_source in {
+            "rbi-notifications",
+            "rbi-press-releases",
+            "rbi-master-directions",
+            "rbi-master-circulars",
+            "rbi-circular-index",
+            "rbi-draft-notifications-guidelines",
+            "rbi-draft-directions-re-wise",
+        }
+
+    def is_single_page_listing_source(self, source: str | None = None) -> bool:
+        target_source = source or self.source
+        configured_strategy = self.archive_strategy if target_source == self.source else ""
+        if configured_strategy in {"single_page_listing", "flat_listing", "inventory", "single_page", "legal_inventory", "flat_inventory"}:
+            return True
+        return target_source in {"rbi-amendment-directions", "rbi-acts", "rbi-rules", "rbi-regulations", "rbi-schemes"}
+
+    def default_single_page_chunk_spec(self, source: str | None = None) -> list[dict[str, Any]]:
+        target_source = source or self.source
+        listing_url = RBI_PRIMARY_LISTING_URLS[target_source]
+        return [{"label": "initial", "url": listing_url, "year": None, "month": None}]
+
     def fetch_index(self, from_date: date, to_date: date) -> Any:
         del from_date, to_date
         return self.fetch_page_html(self.listing_url)
@@ -517,7 +548,12 @@ class RBIScraper(BaseScraper):
 
         chunk_specs = self.build_chunk_specs(self.source)
         if not chunk_specs:
-            raise RuntimeError(f"{self.source} returned zero archive chunks")
+            if self.is_single_page_listing_source():
+                chunk_specs = self.default_single_page_chunk_spec()
+            elif self.is_archive_postback_source():
+                raise RuntimeError(f"{self.source} returned zero archive chunks")
+            else:
+                chunk_specs = self.default_single_page_chunk_spec()
         if all_available and from_date is None:
             from_date = date(1900, 1, 1)
         if from_date is None:
@@ -672,6 +708,8 @@ class RBIScraper(BaseScraper):
             print(f"Occurrence rows written: {occurrences_written}")
         print(f"Duplicates skipped: {duplicates_skipped}")
         print(f"Final CSV row count: {existing_count + len(written_records)}")
+        if self.is_single_page_listing_source() and checkpoint.total_records_detected in {None, 0}:
+            raise RuntimeError(f"{self.source} initial page returned zero rows")
         if resume or checkpoint_path:
             print(f"Checkpoint state: {json.dumps(asdict(checkpoint), indent=2)}")
         self.last_fetch_transport = "httpx"
@@ -898,13 +936,14 @@ class RBIScraper(BaseScraper):
         ]
 
     def build_chunk_specs(self, source: str) -> list[dict[str, Any]]:
+        if self.is_single_page_listing_source(source):
+            return self.default_single_page_chunk_spec(source)
         listing_url = RBI_PRIMARY_LISTING_URLS[source]
         html = self.fetch_page_html(listing_url)
         if source in {
             "rbi-notifications",
             "rbi-press-releases",
             "rbi-circular-index",
-            "rbi-amendment-directions",
             "rbi-draft-notifications-guidelines",
         }:
             return self.extract_year_month_chunks(html, listing_url)
@@ -2053,6 +2092,8 @@ class RBIInventorySourceScraper(RBIScraper):
         return self.source.replace("-", "_")
 
     def inventory_checkpoint_strategy(self) -> str:
+        if self.is_single_page_listing_source():
+            return "single_page_listing"
         return "aspnet_archive_chunks" if any(item.get("year") is not None for item in self.build_chunk_specs(self.source)[:1]) else "single_page"
 
     def inventory_row_link_type(self, row: dict[str, str]) -> str:
@@ -2184,7 +2225,12 @@ class RBIInventorySourceScraper(RBIScraper):
 
         chunk_specs = self.build_chunk_specs(self.source)
         if not chunk_specs:
-            raise RuntimeError(f"{self.source} returned zero archive chunks")
+            if self.is_single_page_listing_source():
+                chunk_specs = self.default_single_page_chunk_spec()
+            elif self.is_archive_postback_source():
+                raise RuntimeError(f"{self.source} returned zero archive chunks")
+            else:
+                chunk_specs = self.default_single_page_chunk_spec()
         if all_available and from_date is None:
             from_date = date(1900, 1, 1)
         if from_date is None:
@@ -2213,7 +2259,7 @@ class RBIInventorySourceScraper(RBIScraper):
                 oldest_available_date=None,
                 total_records_detected=None,
                 count_by_year={},
-                chunk_strategy="aspnet_archive_chunks" if any(item.get("year") is not None for item in chunk_specs) else "single_page",
+                chunk_strategy="single_page_listing" if self.is_single_page_listing_source() else ("aspnet_archive_chunks" if any(item.get("year") is not None for item in chunk_specs) else "single_page"),
                 last_completed_chunk=0,
                 records_written=existing_count,
                 unique_records_written=len(existing_keys),
@@ -2308,6 +2354,8 @@ class RBIInventorySourceScraper(RBIScraper):
         print(f"Rows written: {len(written_rows)}")
         print(f"Duplicates skipped: {duplicates_skipped}")
         print(f"Final CSV row count: {existing_count + len(written_rows)}")
+        if self.is_single_page_listing_source() and checkpoint.total_records_detected in {None, 0}:
+            raise RuntimeError(f"{self.source} initial page returned zero rows")
         if resume or checkpoint_path:
             print(f"Checkpoint state: {json.dumps(asdict(checkpoint), indent=2)}")
         self.last_fetch_transport = "httpx"
@@ -2428,12 +2476,15 @@ class RBIInventorySourceScraper(RBIScraper):
         expected_recent_years = RBI_EXPECTED_RECENT_YEARS.get(self.source, [])
         missing_expected_recent_years = [year for year in expected_recent_years if year_counts.get(int(year), 0) == 0]
         report["missing_expected_recent_years"] = missing_expected_recent_years
-        report["quality_gate_passed"] = not missing_expected_recent_years
+        initial_page_zero_rows = self.is_single_page_listing_source() and total_rows == 0
+        report["quality_gate_passed"] = not missing_expected_recent_years and not initial_page_zero_rows
         report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         self.write_count_csv(year_counts_path, "year", {str(key): year_counts[key] for key in sorted(year_counts)})
         print(json.dumps(report, ensure_ascii=False, indent=2))
         if duplicate_key_count:
             raise RuntimeError(f"RBI data-quality check failed for {self.source}: duplicate keys detected")
+        if initial_page_zero_rows:
+            raise RuntimeError(f"{self.source} initial page returned zero rows")
         if missing_expected_recent_years:
             raise RuntimeError(
                 f"RBI data-quality check failed for {self.source}: missing rows for expected recent year(s) "

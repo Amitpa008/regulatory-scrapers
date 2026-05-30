@@ -1,0 +1,42 @@
+{
+  "source_url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx",
+  "output_path": "data\\rbi_notifications_archive.csv",
+  "newest_available_date": "2026-05-25",
+  "oldest_available_date": "2017-02-02",
+  "years_discovered": [
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ],
+  "total_records_detected": 2068,
+  "count_by_year": {
+    "2017": 307,
+    "2018": 223,
+    "2019": 256,
+    "2020": 160,
+    "2021": 133,
+    "2022": 146,
+    "2023": 103,
+    "2024": 114,
+    "2025": 417,
+    "2026": 209
+  },
+  "count_by_category": {
+    "Notification": 2068
+  },
+  "chunk_strategy": "aspnet_archive_chunks",
+  "last_completed_chunk": 128,
+  "records_written": 2068,
+  "unique_records_written": 2068,
+  "started_at": "2026-05-30T08:48:42.646868+00:00",
+  "updated_at": "2026-05-30T08:51:04.886413+00:00",
+  "completed": false,
+  "errors": []
+}

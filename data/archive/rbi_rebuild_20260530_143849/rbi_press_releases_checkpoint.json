@@ -1,0 +1,36 @@
+{
+  "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+  "output_path": "data\\rbi_press_releases_archive.csv",
+  "newest_available_date": "2026-05-29",
+  "oldest_available_date": "2020-04-01",
+  "years_discovered": [
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ],
+  "total_records_detected": 13029,
+  "count_by_year": {
+    "2020": 1279,
+    "2021": 1938,
+    "2022": 1950,
+    "2023": 2066,
+    "2024": 2388,
+    "2025": 2505,
+    "2026": 903
+  },
+  "count_by_category": {
+    "Press Release": 13029
+  },
+  "chunk_strategy": "aspnet_archive_chunks",
+  "last_completed_chunk": 87,
+  "records_written": 13029,
+  "unique_records_written": 13029,
+  "started_at": "2026-05-30T09:06:18.005500+00:00",
+  "updated_at": "2026-05-30T09:08:48.763565+00:00",
+  "completed": false,
+  "errors": []
+}

@@ -1,0 +1,86 @@
+{
+  "endpoint": "https://www.nsekra.com/api/preloginMgmt/preLogin/circulars",
+  "records": [
+    {
+      "date": "",
+      "subject": "Standard Operating Procedure (“SOP”) for Orderly Winding Down of Critical Operations and Services of the KRA Business",
+      "circular_no": "NSE/KRA/2026/01",
+      "link": "https://www.nsekra.com/cdn/SOP_for_Surrender_of_KYC_Registration.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Registration of clients with KRA",
+      "circular_no": "NSE/KRA/2025/06",
+      "link": "https://www.nsekra.com/cdn/Registration_of_clients_with_KRA.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Clarification on KYC records for Non-Resident Indians (NRIs)",
+      "circular_no": "NSE/KRA/2025/05",
+      "link": "https://www.nsekra.com/cdn/Clarification_on_KYC_records_for_NRI.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Clarification on UBO, Balance Sheet and Shareholding Pattern Update on KRA for Non-Individuals",
+      "circular_no": "NSE/KRA/2025/04",
+      "link": "https://www.nsekra.com/cdn/Clarification_on_UBO_Balance_Sheet_and_Shareholding_Pattern_Update_on_KRA_for_Non_Individuals.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Delinking of Investors KYC Records in KRA System",
+      "circular_no": "NSE/KRA/2025/03",
+      "link": "https://www.nsekra.com/cdn/Delinking_of_Investors_KYC_Records_in_KRA_System.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Implementation of Centralization of certifications under (FATCA) and (CRS) at KRAs for Non-Individual",
+      "circular_no": "NSE/KRA/2025/02",
+      "link": "https://www.nsekra.com/cdn/Implementation_of_Centralization_of_certifications_under_(FATCA)_and_(CRS)_at_KRAs_for_Non-Individual.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Restrictions on fetch of KYC records for ARN holders",
+      "circular_no": "NSE/KRA/2025/01",
+      "link": "https://www.nsekra.com/cdn/Restrictions_on_fetch_of_KYC_records_by_ARN_Holders.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Acceptance of CERSAI KYC Form by KRA",
+      "circular_no": "NSE/KRA/2024/18",
+      "link": "https://www.nsekra.com/cdn/Acceptance_of_CERSAI_KYC_Format.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Centralization of Certifications under FATCA and CRS at KYC Registration Agencies (KRAs)",
+      "circular_no": "NSE/KRA/2024/17-B",
+      "link": "https://www.nsekra.com/cdn/Implementation_of_Centralization_of_certifications_under_Foreign_Account_Tax_Compliance_Act_(FATCA)_and_Common_Reporting_Standard_(CRS)_at_KYC_Registration_Agencies_(KRAs)_Sep30.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    },
+    {
+      "date": "",
+      "subject": "Change in Helpdesk Email ID",
+      "circular_no": "NSE/KRA/2024/17-A",
+      "link": "https://www.nsekra.com/cdn/Change_in_Helpdesk_Email_ID.pdf",
+      "source_url": "https://www.nsekra.com/circulars",
+      "scraped_at": "2026-05-28T12:42:40.169200+00:00"
+    }
+  ],
+  "total_records": 55
+}
